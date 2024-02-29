@@ -1,24 +1,28 @@
 ﻿################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
-
 /Lesson08/.vs/Lesson08
-/.vs/slnx.sqlite
-/.vs/tms-net15-onl/v17/.wsuo
-/.vs/VSWorkspaceState.json
-/Lesson08/obj/Debug/net8.0
-/Lesson08/obj/Lesson08.csproj.nuget.dgspec.json
-/Lesson08/obj/Lesson08.csproj.nuget.g.props
-/Lesson08/obj/Lesson08.csproj.nuget.g.targets
-/Lesson08/obj/project.assets.json
-/Lesson08/obj/project.nuget.cache
-/Lesson08/bin/Debug/net8.0/Lesson08.deps.json
-/Lesson08/bin/Debug/net8.0/Lesson08.dll
-/Lesson08/bin/Debug/net8.0/Lesson08.exe
-/Lesson08/bin/Debug/net8.0/Lesson08.pdb
-/Lesson08/bin/Debug/net8.0/Lesson08.runtimeconfig.json
+/.vs/*
 /.vs/TMSLessons/v17
 /arsalfimov/Lesson08/TasksLesson8/.vs/TasksLesson8
 /arsalfimov/Lesson08/TasksLesson8/TasksLesson8/obj
 /EvgenBy/Нome work 8/Нome work 8/obj
 /EvgenBy/Нome work 8/.vs/Нome work 8
+BelkL1ne/Homework 8/.vs
+BelkL1ne/Homework 8/Homework 8/obj
+/YuriAsm/HomeWork08/.vs/HomeWork08
+/YuriAsm/HomeWork08/HomeWork08/obj
+/kirylnovik/HW8/obj/Debug/net8.0
+/kirylnovik/HW8/obj/Release/net8.0
+/Samples/Lesson08/obj/*
+/Samples/Lesson08/.vs/*
+/Dobronom/HomeWork08/.vs
+/Dobronom/HomeWork08/obj
+/ToffeeGalka/HomeWork8/.vs/HomeWork8
+/ToffeeGalka/HomeWork8/obj
+/Lesson08/obj
+/MaksimKez/HW8/HW8/.vs/HW8
+/MaksimKez/HW8/HW8/HW8/obj
+/.idea/.idea.tms-net15-onl.dir/.idea
+/PavelDev91/Homework08/.vs
+/PavelDev91/Homework08/obj
