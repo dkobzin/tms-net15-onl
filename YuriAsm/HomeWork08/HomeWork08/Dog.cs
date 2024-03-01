@@ -11,7 +11,7 @@ namespace HomeWork08
     {
         public Dog(string name) : base(name)
         {
-            this.Name = name;
+            this.Name = name?? throw new ArgumentNullException(nameof(name)); ;
         }
 
         public override void Eat()
