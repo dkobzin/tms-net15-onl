@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DZLesson8", "DZLesson8\DZLesson8.csproj", "{E595A12E-D038-46A5-A1EC-D0F3B2A67F33}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DZLesson8", "DZLesson8\DZLesson8.csproj", "{2D918A71-7147-4108-A045-610695759EAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E595A12E-D038-46A5-A1EC-D0F3B2A67F33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E595A12E-D038-46A5-A1EC-D0F3B2A67F33}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E595A12E-D038-46A5-A1EC-D0F3B2A67F33}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E595A12E-D038-46A5-A1EC-D0F3B2A67F33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D918A71-7147-4108-A045-610695759EAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D918A71-7147-4108-A045-610695759EAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D918A71-7147-4108-A045-610695759EAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D918A71-7147-4108-A045-610695759EAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {9E01D6CA-753C-4BF3-B956-0F3ECE37ECA0}
+		SolutionGuid = {9321DAF5-0835-4046-B1AC-3CEF492A353D}
 	EndGlobalSection
 EndGlobal

@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using DZLesson8;
+
+Console.WriteLine("Введите имя собаки");
+string name = Console.ReadLine();
+Dog dog = new Dog(name);
+dog.Eat();
+dog.Run();
