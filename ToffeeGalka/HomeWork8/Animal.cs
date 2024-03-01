@@ -12,7 +12,7 @@ namespace Lesson8
         public string Name { get; set; }
         public Animal(string name)
         {
-            this.Name = name;
+            this.Name = name ?? throw new ArgumentNullException(nameof(name));
         }
         public abstract void Eat();    
     }
