@@ -4,10 +4,9 @@ using TasksLesson8.Interfaces;
 
 public class Cat : IMovable, ISound, INameable
 {
-    private string _name = "";
-
-    public string GetName() => _name;
-    public void SetName(string name) => _name = name;
+    protected string Name { get; private set; } = "";
+    public string GetName() => Name;
+    public void SetName(string name) => Name = name;
 
     public void Move()
     {
