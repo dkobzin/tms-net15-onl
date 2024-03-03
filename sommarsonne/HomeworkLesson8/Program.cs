@@ -1,10 +1,22 @@
-﻿namespace HomeworkLesson8
+﻿using System.Threading.Channels;
+
+
+namespace HomeworkLesson8
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("Назовите собаку:");
+            string DogName = Console.ReadLine();
+
+            Dog dog = new Dog();
+
+            dog.SetName(DogName);
+
+            dog.GetName();
+            
+            dog.Eat();
         }
     }
 }
