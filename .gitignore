@@ -1,10 +1,10 @@
-﻿################################################################################
+﻿﻿################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 /Lesson08/.vs/Lesson08
 /.vs/*
 /.vs/TMSLessons/v17
-/arsalfimov/Lesson08/TasksLesson8/.vs/TasksLesson8
+/arsalfimov/Lesson08/TasksLesson8/.vs
 /arsalfimov/Lesson08/TasksLesson8/TasksLesson8/obj
 /EvgenBy/Нome work 8/Нome work 8/obj
 /EvgenBy/Нome work 8/.vs/Нome work 8
@@ -16,7 +16,7 @@ BelkL1ne/Homework 8/Homework 8/obj
 /kirylnovik/HW8/obj/Release/net8.0
 /Samples/Lesson08/obj/*
 /Samples/Lesson08/.vs/*
-/Dobronom/HomeWork08/.vs/HomeWork08
+/Dobronom/HomeWork08/.vs
 /Dobronom/HomeWork08/obj
 /ToffeeGalka/HomeWork8/.vs/HomeWork8
 /ToffeeGalka/HomeWork8/obj
