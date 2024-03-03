@@ -2,8 +2,6 @@
 
 public abstract class Animal
 {
-    protected string Name { get; private set; } = "";
-    public string GetName() => Name;
-    public void SetName(string name) => Name = name;
+    public string Name { get; set; } = "";
     public abstract void Eat();
 }

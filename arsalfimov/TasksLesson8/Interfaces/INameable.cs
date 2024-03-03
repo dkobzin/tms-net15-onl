@@ -2,7 +2,6 @@
 
 public interface INameable
 {
-    string GetName();
-    void SetName(string name);
+    public string Name { get; set; }
 }
 
