@@ -1,0 +1,7 @@
+F:\Net15\PavelDev91\HomeWork8\bin\Debug\HomeWork8.exe.config
+F:\Net15\PavelDev91\HomeWork8\bin\Debug\HomeWork8.exe
+F:\Net15\PavelDev91\HomeWork8\bin\Debug\HomeWork8.pdb
+F:\Net15\PavelDev91\HomeWork8\obj\Debug\HomeWork8.csproj.AssemblyReference.cache
+F:\Net15\PavelDev91\HomeWork8\obj\Debug\HomeWork8.csproj.CoreCompileInputs.cache
+F:\Net15\PavelDev91\HomeWork8\obj\Debug\HomeWork8.exe
+F:\Net15\PavelDev91\HomeWork8\obj\Debug\HomeWork8.pdb
