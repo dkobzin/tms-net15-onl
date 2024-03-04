@@ -7,7 +7,6 @@ public abstract class Car(int initialFuel, int consumption) : IVehicle
 
     public void Drive(int distance)
     {
-        // Вычисляем необходимое количество топлива для переданного расстояния
         int fuelRequired = (distance / 100) * fuelConsumption;
         if (fuelLevel >= fuelRequired && fuelLevel > 0)
         {
