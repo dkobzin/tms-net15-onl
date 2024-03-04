@@ -1,0 +1,15 @@
+D:\Work\TeachMeSkill\tms-net15-onl\Samples\Lesson10\Lesson10Test\Lesson10TestQ6\bin\Debug\net8.0\Lesson10TestQ6.exe
+D:\Work\TeachMeSkill\tms-net15-onl\Samples\Lesson10\Lesson10Test\Lesson10TestQ6\bin\Debug\net8.0\Lesson10TestQ6.deps.json
+D:\Work\TeachMeSkill\tms-net15-onl\Samples\Lesson10\Lesson10Test\Lesson10TestQ6\bin\Debug\net8.0\Lesson10TestQ6.runtimeconfig.json
+D:\Work\TeachMeSkill\tms-net15-onl\Samples\Lesson10\Lesson10Test\Lesson10TestQ6\bin\Debug\net8.0\Lesson10TestQ6.dll
+D:\Work\TeachMeSkill\tms-net15-onl\Samples\Lesson10\Lesson10Test\Lesson10TestQ6\bin\Debug\net8.0\Lesson10TestQ6.pdb
+D:\Work\TeachMeSkill\tms-net15-onl\Samples\Lesson10\Lesson10Test\Lesson10TestQ6\obj\Debug\net8.0\Lesson10TestQ6.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\TeachMeSkill\tms-net15-onl\Samples\Lesson10\Lesson10Test\Lesson10TestQ6\obj\Debug\net8.0\Lesson10TestQ6.AssemblyInfoInputs.cache
+D:\Work\TeachMeSkill\tms-net15-onl\Samples\Lesson10\Lesson10Test\Lesson10TestQ6\obj\Debug\net8.0\Lesson10TestQ6.AssemblyInfo.cs
+D:\Work\TeachMeSkill\tms-net15-onl\Samples\Lesson10\Lesson10Test\Lesson10TestQ6\obj\Debug\net8.0\Lesson10TestQ6.csproj.CoreCompileInputs.cache
+D:\Work\TeachMeSkill\tms-net15-onl\Samples\Lesson10\Lesson10Test\Lesson10TestQ6\obj\Debug\net8.0\Lesson10TestQ6.sourcelink.json
+D:\Work\TeachMeSkill\tms-net15-onl\Samples\Lesson10\Lesson10Test\Lesson10TestQ6\obj\Debug\net8.0\Lesson10TestQ6.dll
+D:\Work\TeachMeSkill\tms-net15-onl\Samples\Lesson10\Lesson10Test\Lesson10TestQ6\obj\Debug\net8.0\refint\Lesson10TestQ6.dll
+D:\Work\TeachMeSkill\tms-net15-onl\Samples\Lesson10\Lesson10Test\Lesson10TestQ6\obj\Debug\net8.0\Lesson10TestQ6.pdb
+D:\Work\TeachMeSkill\tms-net15-onl\Samples\Lesson10\Lesson10Test\Lesson10TestQ6\obj\Debug\net8.0\Lesson10TestQ6.genruntimeconfig.cache
+D:\Work\TeachMeSkill\tms-net15-onl\Samples\Lesson10\Lesson10Test\Lesson10TestQ6\obj\Debug\net8.0\ref\Lesson10TestQ6.dll
