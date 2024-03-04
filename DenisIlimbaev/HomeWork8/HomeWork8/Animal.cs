@@ -1,6 +1,6 @@
 ﻿using System.Xml.Linq;
 using static System.Console;
-namespace HomeTask8
+namespace HomeWork8
 {
     internal abstract class Animal
     {
