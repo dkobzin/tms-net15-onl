@@ -1,0 +1,7 @@
+F:\Net15onl\tms-net15-onl\PavelDev91\HomeWork10\bin\Debug\HomeWork10.exe.config
+F:\Net15onl\tms-net15-onl\PavelDev91\HomeWork10\bin\Debug\HomeWork10.exe
+F:\Net15onl\tms-net15-onl\PavelDev91\HomeWork10\bin\Debug\HomeWork10.pdb
+F:\Net15onl\tms-net15-onl\PavelDev91\HomeWork10\obj\Debug\HomeWork10.csproj.AssemblyReference.cache
+F:\Net15onl\tms-net15-onl\PavelDev91\HomeWork10\obj\Debug\HomeWork10.csproj.CoreCompileInputs.cache
+F:\Net15onl\tms-net15-onl\PavelDev91\HomeWork10\obj\Debug\HomeWork10.exe
+F:\Net15onl\tms-net15-onl\PavelDev91\HomeWork10\obj\Debug\HomeWork10.pdb
