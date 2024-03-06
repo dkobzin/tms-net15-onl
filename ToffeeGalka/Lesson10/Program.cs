@@ -1,15 +1,15 @@
-namespace Lesson10
+п»їnamespace Lesson10
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите количество бензина для автомобиля SportsCar ");
+            Console.WriteLine("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ Р±РµРЅР·РёРЅР° РґР»СЏ Р°РІС‚РѕРјРѕР±РёР»СЏ SportsCar ");
             int petrolSportsCar = int.Parse(Console.ReadLine());
-            Console.WriteLine("Введите количество бензина для атомобиля Truck");
+            Console.WriteLine("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ Р±РµРЅР·РёРЅР° РґР»СЏ Р°С‚РѕРјРѕР±РёР»СЏ Truck");
             int petrolTruck = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Введите расстояние для поездки");
+            Console.WriteLine("Р’РІРµРґРёС‚Рµ СЂР°СЃСЃС‚РѕСЏРЅРёРµ РґР»СЏ РїРѕРµР·РґРєРё");
             int distance = int.Parse(Console.ReadLine());
 
 
