@@ -8,6 +8,6 @@ namespace Lesson10
 {
     public class SportsCar : Car
     {
-        public SportsCar(int initialFuel) : base(initialFuel, 10) { }
+        public SportsCar(int initialFuel) : base(0, 10) { }
     }
 }
