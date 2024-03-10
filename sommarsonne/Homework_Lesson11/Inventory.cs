@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Homework_Lesson11
 {
-    internal class Inventory
+    public class Inventory
     {
         private List<Item> items;
 
@@ -43,7 +43,7 @@ namespace Homework_Lesson11
             {
                 Console.WriteLine($"Наименование: {item.name}, Цена: {item.price}");
             }
-            Console.WriteLine($"Общее количество товаров: {CountItems()}, Общая цена: {CalculateTotalPrice()} RUB.");
+            Console.WriteLine($"Общее количество товаров: {CountItems()}, Общая цена: {CalculateTotalPrice()}.");
         }
     }
 }

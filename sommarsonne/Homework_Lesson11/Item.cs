@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace Homework_Lesson11
 {
-    internal class Item
+    public class Item
     {
-        public string name = "Undefined";
-        public int price;
-        public int id;
-        public int amount = 1;
+        public string name { get; set; }
+        public double price { get; set; }
+        public int id { get; set; }
 
         public void PrintItemInfo()
         {
-            Console.WriteLine($"Наименование: {name} , Цена: {price} , Количество: {amount} , Идентификатор: {id}");
+            Console.WriteLine($"Name: {name}, Price: {price}, ID: {id}");
         }
     }
 }
