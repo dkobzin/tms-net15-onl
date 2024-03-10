@@ -2,7 +2,7 @@
 {
     public interface IVechicle
     {
-        public void Drive();
-        public bool Refuel(int quantity);
+        void Drive();
+        bool Refuel(int quantity);
     }
 }

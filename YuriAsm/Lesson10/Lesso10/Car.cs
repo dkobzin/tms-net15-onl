@@ -18,14 +18,14 @@
             Consumption = consumption;
         }
 
-        void IVechicle.Drive()
+        public void Drive()
         {
             if (Fuel > 0)
                 Console.WriteLine($"Автомобиль {GetType().Name} едет");
             else Console.WriteLine("Кончилось топливо");
         }
 
-        bool IVechicle.Refuel(int quantity)
+        public bool Refuel(int quantity)
         {
 
             Fuel += quantity;
