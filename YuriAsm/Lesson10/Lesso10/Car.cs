@@ -7,6 +7,13 @@
 
         public Car(int fuel, int consumption)
         {
+            // инкапсуляция данных здесь не настроена, потому что я могу записать любое значение
+            // ты должен всегда проверять что приходит
+
+            if (fuel <= 0)
+                throw new ArgumentException("value is incorrect");
+            if(consumption <= 0)
+                throw new ArgumentException("value is incorrect");
             Fuel = fuel;  
             Consumption = consumption;
         }
