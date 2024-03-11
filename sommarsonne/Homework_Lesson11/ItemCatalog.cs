@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Homework_Lesson11
 {
-    public class ItemCatalog
+    public class ItemCatalog : Item
     {
         public Item apple { get; set; }
         public Item watermelon { get; set; }
@@ -36,6 +36,8 @@ namespace Homework_Lesson11
                 price = 5,
                 id = 3
             };
+
+            //double[] priceArray = { 2, 10, 5 };
         }
     }
 }
