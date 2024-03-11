@@ -3,8 +3,13 @@
 using Lesson12;
 
 // Boxing
-Person tom = new(123, "Tom");
-Person bob = new("abc", "Bob");
+Person tom = new(123, "Tom", 21);
+Person bob = new("abc", "Bob", 64);
+var ps = new List<Person>()
+{
+    tom, bob
+};
+var personWithMaxAge = new PersonHelper<Person>(ps).FindWithMaxAge(50);
 
 // Unboxing
 int tomId = (int)tom.Id;
