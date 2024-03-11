@@ -3,6 +3,8 @@ using HomeWork10.Data;
 
 ProgramHelper helper = new ProgramHelper();
 Inventory inventory = new Inventory();
+ExecutionManager manager = new ExecutionManager(() => inventory.Services);
+
 Dictionary<int, string> actions = new Dictionary<int, string>
 {
     { 1, "Показать список" },
@@ -12,7 +14,8 @@ Dictionary<int, string> actions = new Dictionary<int, string>
     { 5, "Удалить товар" },
     { 6, "Добавить еденицу товара" },
     { 7, "Удалить еденицу товара" },
-    { 8, "Очистить консоль" }
+    { 8, "Провести инвентаризацию товара" },
+    { 9, "Очистить консоль" }
 };
 
 bool exit = false;
@@ -130,6 +133,9 @@ while (!exit)
             }
             break;
         case 8:
+              helper.HandleInventoryActions(manager);
+            break;
+        case 9:
             Console.Clear();
             break;
         default:
