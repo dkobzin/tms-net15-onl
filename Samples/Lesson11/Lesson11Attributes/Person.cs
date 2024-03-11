@@ -6,6 +6,7 @@ public class Person
 {
     [Required(AllowEmptyStrings = false)]
     public string Name { get;}
+    
     public int Age { get; set; }
     public Person(string name, int age)
     {
