@@ -2,8 +2,11 @@
 
 namespace HomeWork10
 {
+
     public class ProgramHelper
     {
+
+
         public void ShowServices(IEnumerable<Service> services)
         {
             Console.WriteLine("\nНаши товары\n");
@@ -168,6 +171,65 @@ namespace HomeWork10
             }
 
             return false;
+        }
+
+        public void HandleInventoryActions(ExecutionManager manager)
+        {
+            bool exit = false;
+
+            Dictionary<int, string> actions = new Dictionary<int, string>
+            {
+               { 1, "Показать товар с максимальной ценой" },
+               { 2, "Показать товар с минимальной ценой" },
+               { 3, "Высчитать среднюю цену товаров" },
+               { 4, "Очистить консоль" }
+            
+            };
+
+            ShowActions(actions);
+
+            Console.WriteLine("\nДля выхода из режима инвентаризации введите - exit");
+
+            while (!exit)
+            {
+                var input = Console.ReadLine();
+
+                if (input == "exit")
+                {
+                    exit = true;
+
+                    break;
+                }
+
+                if (!int.TryParse(input, out var key) || !actions.TryGetValue(key, out var _))
+                {
+                    Console.WriteLine("\nНеизвестное действие\n");
+                    Console.ReadLine();
+                    Console.Clear();
+                    continue;
+                }
+
+                switch (key)
+                {
+                    case 1:
+                        manager.GetMaxPriceProducts();
+                        break;
+                    case 2:
+                        manager.GetMinPriceProducts();
+                        break;
+                    case 3:
+                        manager.GetMiddlePriceProducts();
+                        break;
+                    case 4:
+                        Console.Clear();
+                        ShowActions(actions);
+                        Console.WriteLine("\nДля выхода из режима инвентаризации введите - exit");
+                        break;
+                    default:
+                        throw new NotSupportedException();
+
+                }
+            }
         }
     }
 }
