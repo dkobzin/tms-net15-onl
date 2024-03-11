@@ -31,7 +31,7 @@ namespace HW11
 
                     if (choice == "да")
                     {
-                        Products.Append(new ProductWeight());
+                        Products.Add(new ProductWeight());
                     }
                     else
                     {
