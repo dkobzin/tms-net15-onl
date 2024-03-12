@@ -9,8 +9,8 @@ class Bear(string name) : Animal(name) { }
 
 class Camel(string name) : Animal(name) { }
 public class Stack<T>   // A simple Stack implementation
-    //: IPoppable<T>,
-    //    IPushable<T>
+    : IPoppable<T>
+        ,IPushable<T>
 {
     int position;
     T[] data = new T[100];
