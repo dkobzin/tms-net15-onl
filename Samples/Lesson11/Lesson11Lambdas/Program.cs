@@ -9,7 +9,13 @@ Action<int> print = Console.WriteLine;
 
 print(25);
 
-Predicate<int> isPositive = (int x) => x > 0;
+var condition = 0;
+
+Predicate<int> isPositive = (int x) =>
+{
+    var tempCondition = condition;
+    return x > tempCondition;
+};
 
 Console.WriteLine(isPositive(-20));
 
