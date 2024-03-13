@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Lesson10Q6
-build_property.ProjectDir = D:\Repositories\TMSLessons\Samples\Lesson10\Lesson10Test\Lesson10TestQ6\
+build_property.ProjectDir = C:\Users\Игорь\source\repos\tms-net15-onl\Samples\Lesson10\Lesson10Test\Lesson10TestQ6\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

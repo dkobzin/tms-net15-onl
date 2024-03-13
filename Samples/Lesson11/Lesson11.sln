@@ -6,6 +6,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson11WinForm", "Lesson11
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson11Delegate", "Lesson11Delegate\Lesson11Delegate.csproj", "{9377D0C7-0440-4F82-B257-E3FF4FF1C66C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson11Lambdas", "Lesson11Lambdas\Lesson11Lambdas.csproj", "{1A8C0998-40E7-497D-AACA-F93772ACD51C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson11Attributes", "Lesson11Attributes\Lesson11Attributes.csproj", "{F164CDE3-0AF8-4C2A-80C1-771A8E8274FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,13 @@ Global
 		{9377D0C7-0440-4F82-B257-E3FF4FF1C66C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9377D0C7-0440-4F82-B257-E3FF4FF1C66C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9377D0C7-0440-4F82-B257-E3FF4FF1C66C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A8C0998-40E7-497D-AACA-F93772ACD51C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A8C0998-40E7-497D-AACA-F93772ACD51C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A8C0998-40E7-497D-AACA-F93772ACD51C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A8C0998-40E7-497D-AACA-F93772ACD51C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F164CDE3-0AF8-4C2A-80C1-771A8E8274FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F164CDE3-0AF8-4C2A-80C1-771A8E8274FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F164CDE3-0AF8-4C2A-80C1-771A8E8274FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F164CDE3-0AF8-4C2A-80C1-771A8E8274FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
