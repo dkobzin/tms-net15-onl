@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace HW11
 {
@@ -8,31 +7,31 @@ namespace HW11
         public List<Product> Products { get; set; }
         public Inventory()
         {
-            Products = new List<Product>(10);
+            Products = new List<Product>();
             string choice = "";
             while (true)
             {
                 Console.WriteLine();
-                Console.WriteLine("Сколько продуктов добавить? (потом можно будет добавить еще)");
+                Console.WriteLine("How many products do u want to add? (later you can do it again)");
                 if (!int.TryParse(Console.ReadLine(), out int numOfProducts) || numOfProducts < 1) continue;
                 for (int i = 0; i < numOfProducts; i++)
                 {
                     while (true)
                     {
-                        Console.WriteLine("Продукт надо взвесмить?(да/нет)");
+                        Console.WriteLine("Does the product need to be weighed? (yes/no)");
                         choice = Console.ReadLine().ToLower();
                         if (string.IsNullOrEmpty(choice)) continue;
                         break;
                     }
 
-                    if (choice == "да")
+                    if (choice.ToLower() == "yes" || choice.ToLower() == "да")
                     {
                         Products.Add(new ProductWeight());
                     }
                     else
                     {
                         Console.WriteLine();
-                        Products.Append(new ProductUnit());
+                        Products.Add(new ProductUnit());
                         Console.WriteLine();
                     }
                 }
@@ -45,13 +44,13 @@ namespace HW11
             while (true)
             {
                 Console.WriteLine();
-                Console.WriteLine("Сколько продуктов добавить?");
+                Console.WriteLine("How many products should I add?");
                 if (!int.TryParse(Console.ReadLine(), out int numOfProducts) || numOfProducts < 1) continue;
                 for (int i = 0; i < numOfProducts; i++)
                 {
                     while (true)
                     {
-                        Console.WriteLine("Продукт надо взвесмить?(да/нет)");
+                        Console.WriteLine("Does the product need to be weighed? (yes/no)");
                         choice = Console.ReadLine().ToLower();
                         if (string.IsNullOrEmpty(choice)) continue;
                         break;
@@ -59,12 +58,12 @@ namespace HW11
 
                     if (choice == "да")
                     {
-                        Products.Append(new ProductWeight());
+                        Products.Add(new ProductWeight());
                     }
                     else
                     {
                         Console.WriteLine();
-                        Products.Append(new ProductUnit());
+                        Products.Add(new ProductUnit());
                         Console.WriteLine();
                     }
                 }
@@ -77,7 +76,7 @@ namespace HW11
             Console.WriteLine();
             while (true)
             {
-                Console.WriteLine("Введите ID продукта, чтобы его удалить");
+                Console.WriteLine("Enter the product ID to remove it");
                 string IDtoDelete = Console.ReadLine();
                 if (string.IsNullOrWhiteSpace(IDtoDelete)) continue;
                 foreach (Product product in Products)
@@ -86,12 +85,12 @@ namespace HW11
                     {
                         Console.WriteLine();
                         Products.Remove(product);
-                        Console.WriteLine("Продукт успешно удален");
+                        Console.WriteLine("Product removed successfully");
                         Console.WriteLine();
                         return;
                     }
                 }
-                Console.WriteLine($"Продукт по ID {IDtoDelete} не найден");
+                Console.WriteLine($"Product ID {IDtoDelete} not found");
                 Console.WriteLine();
             }
         }

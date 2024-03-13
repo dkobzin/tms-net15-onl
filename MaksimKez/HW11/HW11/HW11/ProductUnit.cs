@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HW11
+﻿namespace HW11
 {
     internal class ProductUnit : Product, IPricePerUnit
     {
@@ -15,7 +9,7 @@ namespace HW11
         {
             while (true)
             {
-                Console.WriteLine("Введите количество единиц товара");
+                Console.WriteLine("Enter the number of product units");
                 if (!int.TryParse(Console.ReadLine(), out int quantity) || quantity <= 0) continue;
                 this.Quantity = quantity;
                 break;
@@ -23,7 +17,7 @@ namespace HW11
 
             while (true)
             {
-                Console.WriteLine("Введите цену товара за единицу");
+                Console.WriteLine("Enter item price per unit");
                 if (!double.TryParse(Console.ReadLine(), out double pricePerUnit) || pricePerUnit <= 0) continue;
                 this.PricePerUnit = pricePerUnit;
                 break;
@@ -31,7 +25,7 @@ namespace HW11
 
             while (true)
             {
-                Console.WriteLine("Введите название товара");
+                Console.WriteLine("Enter product name");
                 Name = Console.ReadLine();
                 if (string.IsNullOrEmpty(Name)) continue;
                 break; 
@@ -45,8 +39,8 @@ namespace HW11
 
         public override string ToString()
         {
-            return $"Название продукта {this.Name}. Итоговая цена продутка {this.TotalPrice} " +
-                $"Цена за единицу {this.PricePerUnit}. Единиц товара {this.Quantity}";
+            return $"Product name {this.Name}. Total price of the product {this.TotalPrice} " +
+                $"Price Per Unit {this.PricePerUnit}. Item Units {this.Quantity}";
         }
     }
 }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HW11
+﻿namespace HW11
 {
     internal class ProductWeight : Product, IPricePerWeight
     {
@@ -14,14 +8,14 @@ namespace HW11
         {
             while (true)
             {
-                Console.WriteLine("Введите вес товара");
+                Console.WriteLine("Enter the weight of the product");
                 if (!double.TryParse(Console.ReadLine(), out double weight) || weight <= 0) continue;
                 this.Weight = weight;
                 break;
             }
             while (true)
             {
-                Console.WriteLine("Введите цену за кг товара");
+                Console.WriteLine("Enter the price per kg of product");
                 if (!double.TryParse(Console.ReadLine(), out double pricePerKilo) || pricePerKilo <= 0) continue;
                 this.PricePerKilo = pricePerKilo;
                 break;
@@ -29,7 +23,7 @@ namespace HW11
 
             while (true)
             {
-                Console.WriteLine("Введите название товара");
+                Console.WriteLine("Enter product name");
                 Name = Console.ReadLine();
                 if (string.IsNullOrEmpty(Name)) continue;
                 break;
@@ -42,8 +36,8 @@ namespace HW11
         public double CalculatePrice() => Weight * PricePerKilo;
         public override string ToString()
         {
-            return $"Название продукта {this.Name}. Итоговая цена продутка {this.TotalPrice} " +
-                $"Цена за единицу {this.PricePerKilo}. Единиц товара {this.Weight}";
+            return $"Product name {this.Name}. Total price of the product {this.TotalPrice} " +
+                $"Price per unit {this.PricePerKilo}. Product units {this.Weight}";
         }
 
     }
