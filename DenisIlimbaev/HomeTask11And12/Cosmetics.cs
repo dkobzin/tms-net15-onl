@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomeTask11
 {
-    enum CategoryCosm
-    {
-        Man,
-        Woman
-    }
+    
     internal class Cosmetics : RefProduct
     {
         internal CategoryCosm CategoryCosm { get; set; }

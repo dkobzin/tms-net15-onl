@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace HomeTask11
 {
    
-    partial class Inventory<TProduct>  where TProduct : RefProduct
+     class Inventory<TProduct> : IEnumerable where TProduct : RefProduct
     {
         private List<TProduct> listProduct;
         internal event Action actionsin;
@@ -56,18 +56,7 @@ namespace HomeTask11
             return eventStart;
 
         }
-    }
-
-
-
-
-
-
-
-
-    partial class Inventory<TProduct> : IEnumerable 
-    {
-        public IEnumerator<( string, double)> GetEnumerator()
+        public IEnumerator<(string, double)> GetEnumerator()
         {
             (string, double) container;
             for (int i = 0; i < listProduct.Count; i++)
@@ -79,7 +68,7 @@ namespace HomeTask11
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new NotImplementedException();    
+            throw new NotImplementedException();
         }
     }
 

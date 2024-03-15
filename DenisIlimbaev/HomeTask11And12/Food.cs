@@ -6,20 +6,8 @@ using System.Threading.Tasks;
 
 namespace HomeTask11
 {
-    enum CategoryFood
-    {
-        Dairy,
-        Meat,
-        FastFood,
-        Drinks
-    }
-    enum Package
-    {
-        Carton,
-        Paper,
-        Bottle,
-        Metal
-    }
+    
+    
     internal class Food : RefProduct
     {
         internal CategoryFood CategoryFood { get; set; }
