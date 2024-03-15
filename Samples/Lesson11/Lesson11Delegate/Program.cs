@@ -3,7 +3,7 @@
 public class Account
 {
     public delegate void AccountHandler(string message);
-    public event AccountHandler Notify;
+    public event AccountHandler? Notify;
     
     public decimal Sum { get; private set; }
 

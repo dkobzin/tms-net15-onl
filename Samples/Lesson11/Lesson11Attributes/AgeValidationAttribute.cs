@@ -1,6 +1,6 @@
 ﻿namespace Lesson11Attributes;
 
-[AttributeUsage(AttributeTargets.Class | AttributeTargets.Property)]
+[AttributeUsage(AttributeTargets.Class)]
 public class AgeValidationAttribute : Attribute
 {
     public int Age { get;}
