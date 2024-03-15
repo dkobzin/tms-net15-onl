@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomeTask11
 {
-    class UserInventory<TProduct> where TProduct : ProductStandart, new()
+    class UserInventory<TProduct> where TProduct : RefProduct
     {
         internal Inventory<TProduct> UserInv {  get; private set; }
         internal string[] arrayCategory {  get; private set; } =
@@ -17,7 +17,6 @@ namespace HomeTask11
         internal UserInventory(Inventory<TProduct> inventory)
         {
             UserInv = inventory;
-            
         }
 
         internal void Start()
@@ -31,11 +30,18 @@ namespace HomeTask11
                 "4.Получить сумму всех продуктов"
             };
             Console.WriteLine("Выберите действие: ");
+            
             foreach(string action in actions ) Console.WriteLine(action);
             switch (Convert.ToUInt32(Console.ReadLine()))
             {
                 case 1:
-                    UserInv.AddProductInInventory(new TProduct() { CategoryProduct = TakeMeCategory(), NameProduct = Input("Введите название продукта: "), Price = Convert.ToUInt32(Input("Введите цену на продукт: ")), Quantity = Convert.ToUInt32(Input("Введите количество продукта: ")) });
+                    Product product = new Product()
+                    {
+                        NameProduct = Input("Введите название продукта: "),
+                        Quantity = Convert.ToUInt32(Input("Введите количество продукта: ")),
+                        Price = Convert.ToUInt32(Input("Введите цену на продукт: "))
+                    };
+                    UserInv.AddProductInInventory((TProduct)new RefProduct() { ProductObj = product});
                     break;
                 case 2:
                     UserInv.DeletedProductInInventory(Input("Введите ID продукта: "));

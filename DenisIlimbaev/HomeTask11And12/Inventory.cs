@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace HomeTask11
 {
    
-    partial class Inventory<TProduct>  where TProduct : ProductStandart
+    partial class Inventory<TProduct>  where TProduct : RefProduct
     {
         private List<TProduct> listProduct;
         internal event Action actionsin;
@@ -23,20 +23,20 @@ namespace HomeTask11
             double totalPrice = 0;
             foreach(var product in listProduct)
             {
-                totalPrice += product.Price;
+                totalPrice += product.ProductObj.Price;
             }
             return totalPrice;
         }
         internal void AllProductInInventory()
         {
-            foreach(var product in listProduct) Console.WriteLine($"имя продукта:{product.NameProduct} \nцена продукта: {product.Price}\nиндетификатор продукта: {product.Identity}\nколичество: {product.Quantity}\n ");
+            foreach(var product in listProduct) Console.WriteLine($"имя продукта:{product.ProductObj.NameProduct} \nцена продукта: {product.ProductObj.Price}\nиндетификатор продукта: {product.ProductObj.Identity}\nколичество: {product.ProductObj.Quantity}\n ");
             Console.WriteLine();
         }
         internal void DeletedProductInInventory(string ID)
         {
             Action action = () => Console.WriteLine("Удалён новый продукт");
             actionsin += action;
-            listProduct = listProduct.Where(x => x.Identity != ID).ToList();
+            listProduct = listProduct.Where(x => x.ProductObj.Identity != ID).ToList();
         }
         internal void AddProductInInventory(TProduct product)
         {
@@ -67,22 +67,19 @@ namespace HomeTask11
 
     partial class Inventory<TProduct> : IEnumerable 
     {
-        public IEnumerator<(CategoryProduct, string, double)> GetEnumerator()
+        public IEnumerator<( string, double)> GetEnumerator()
         {
-            (CategoryProduct, string, double) container;
+            (string, double) container;
             for (int i = 0; i < listProduct.Count; i++)
             {
-                container = (listProduct[i].CategoryProduct, listProduct[i].NameProduct, listProduct[i].Price)!;
+                container = (listProduct[i].ProductObj.NameProduct, listProduct[i].ProductObj.Price)!;
                 yield return container;
             }
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            for (int i = 0; i  < listProduct.Count; i++)
-            {
-                yield return listProduct[i];
-            }
+            throw new NotImplementedException();    
         }
     }
 
