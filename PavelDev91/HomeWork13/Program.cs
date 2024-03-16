@@ -10,6 +10,7 @@ namespace HomeWork13
     {
         static void Main(string[] args)
         {
+            new XProgram();
         }
     }
 }
