@@ -9,11 +9,11 @@ namespace Login_Password_Lesson13
 {
     public class WrongPasswordException : Exception
     {
-        private string userinput;
+        //private string userinput;
 
-        public WrongPasswordException(string detail, string password)
-        {
-            userinput = detail;
-        }
+        //public WrongPasswordException(string detail, string password)
+        //{
+        //    userinput = detail;
+        //}
     }
 }
