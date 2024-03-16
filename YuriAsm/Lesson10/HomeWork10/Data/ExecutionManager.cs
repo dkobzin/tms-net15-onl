@@ -1,4 +1,6 @@
-﻿namespace HomeWork10.Data
+﻿using HomeWork10.Data.Services.Base;
+
+namespace HomeWork10.Data
 {
     public class ExecutionManager
     {
@@ -35,5 +37,7 @@
 
             Console.WriteLine($"\nСредняя стоимость товаров - {Math.Ceiling(middlePrice)}\n");
         }
+        
+       
     }
 }
