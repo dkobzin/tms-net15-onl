@@ -8,5 +8,19 @@ namespace Login_Password_Lesson13
 {
     public class WrongLoginException : Exception
     {
+        public WrongLoginException(string message) : base(message)
+        {
+
+        }
+
+        public static bool CheckSpaces(string login)
+        {
+            return login.Contains(" ");
+        }
+
+        public static bool CheckLength(string login, int maxLength)
+        {
+            return login.Length > maxLength;
+        }
     }
 }

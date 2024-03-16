@@ -8,12 +8,13 @@ namespace Login_Password_Lesson13
         {
             User user = new User();
 
-            user.GetLoginAndPassword();
+            user.GetLoginPassword();
 
             Console.WriteLine($"Login: {user.login}");
             Console.WriteLine($"Password: {user.password}");
+
+            Console.ReadLine();
         }
-
     }
-
+   
 }

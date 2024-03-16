@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace Login_Password_Lesson13
 {
-    public class Exception : User
+    public class Exception
     {
+        private string message;
 
+        public Exception(string message)
+        {
+            this.message = message;
+        }
     }
 }
