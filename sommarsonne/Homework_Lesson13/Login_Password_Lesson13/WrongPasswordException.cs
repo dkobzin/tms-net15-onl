@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 
 namespace Login_Password_Lesson13
 {
-    //public class WrongPasswordException : Exception
-    //{
-    //    //private string userinput;
+    public class WrongPasswordException : Exception
+    {
+        public WrongPasswordException() : base()
+        {
+        }
 
-    //    //public WrongPasswordException(string detail, string password)
-    //    //{
-    //    //    userinput = detail;
-    //    //}
-    //}
+        public WrongPasswordException(string message) : base(message)
+        {
+        }
+    }
 }
