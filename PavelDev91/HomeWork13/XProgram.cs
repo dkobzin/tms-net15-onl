@@ -46,9 +46,7 @@ public class XProgram
 
         while(true)
         {
-            myUser.Login = workConsole.WriteRead(2, 3, "Az Ая 09 =+-*/ `~_ !? ;: @#$%& []{}<>^ /\\\\|()\\", 60);
-
-            if (myUser.Login.Length > 20 || myUser.Login.IndexOf(' ') != -1)
+            if (myUser.Login_Validate(workConsole.WriteRead(2, 3, "Az Ая 09 =+-*/ `~_ !? ;: @#$%& []{}<>^ /\\\\|()\\", 60)) == false)
             {
                 loginException = new WrongLoginException("Login: Не верный формат!");
 
@@ -71,9 +69,7 @@ public class XProgram
 
         while (true)
         {
-            myUser.Password = workConsole.WriteRead(2, 3, "Az Ая 09 =+-*/ `~_ !? ;: @#$%& []{}<>^ /\\\\|()\\", 60);
-
-            if (myUser.Password.Length > 20 || myUser.Password.IndexOf(' ') != -1 || FindDigit(myUser.Password) == false)
+            if (myUser.Password_Validate(workConsole.WriteRead(2, 3, "Az Ая 09 =+-*/ `~_ !? ;: @#$%& []{}<>^ /\\\\|()\\", 60)) == false)
             {
                 passwordException = new WrongPasswordException("Password: Не верный формат!");
 
@@ -93,9 +89,7 @@ public class XProgram
 
         while(true)
         {
-            myUser.ConfirmPassword = workConsole.WriteRead(2, 3, "Az Ая 09 =+-*/ `~_ !? ;: @#$%& []{}<>^ /\\\\|()\\", 60);
-
-            if (myUser.Password != myUser.ConfirmPassword)
+            if (myUser.ConfirmPassword_Validate(workConsole.WriteRead(2, 3, "Az Ая 09 =+-*/ `~_ !? ;: @#$%& []{}<>^ /\\\\|()\\", 60)) == false)
             {
                 passwordException = new WrongPasswordException("Password: Пароли не совпадают!");
 
@@ -111,30 +105,18 @@ public class XProgram
             break;
         }
         //-----------------------------------------------------
-        string[] mess = new string[1];
-        mess[0] = "Регистрация пройдена успешно!";
+        if (myUser.RegStatus == true)
+        {
+            string[] mess = new string[1];
+            mess[0] = "Регистрация пройдена успешно!";
 
-        workConsole.ShowMessage(mess, MyConsole.eMessageType.info, MyConsole.eMessageBtn.btnOk, out pressKey);
+            workConsole.ShowMessage(mess, MyConsole.eMessageType.info, MyConsole.eMessageBtn.btnOk, out pressKey);
+        }
     }
     //---------------------------------------------------------
     public bool Login(XUser userData)
     {
         return true;
-    }
-    //---------------------------------------------------------
-    private bool FindDigit(string value)
-    {
-        bool res = false;
-
-        for (int i = 0; i < value.Length; i++)
-        {
-            if (char.IsDigit(value[i]))
-            {
-                return true;
-            }
-        }
-
-        return res;
     }
     //---------------------------------------------------------
 }
