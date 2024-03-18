@@ -43,8 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="nsMyConsole.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WrongLoginException.cs" />
+    <Compile Include="WrongPasswordException.cs" />
+    <Compile Include="XProgram.cs" />
+    <Compile Include="XUser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
