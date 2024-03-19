@@ -7,12 +7,7 @@ using System.Threading.Tasks;
 
 namespace HomeTask11
 {
-    internal interface IMangerInventory
-    {
-        public double MaxPrice();
-        public double MinPrice();
-        public double MiddlePrice();
-    }
+ 
     internal class ExecutionManager<TProduct> :  IMangerInventory where TProduct : RefProduct
     {
         internal UserInventory<TProduct> inventory;

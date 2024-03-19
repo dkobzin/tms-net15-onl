@@ -5,12 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
-enum CategoryProduct
-{
-    Food,
-    Cosmetic,
-    
-}
+
 namespace HomeTask11
 {
     internal sealed class Product

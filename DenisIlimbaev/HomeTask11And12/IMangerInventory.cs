@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace HomeTask11
 {
-    enum CategoryFood
+    internal interface IMangerInventory
     {
-        Dairy,
-        Meat,
-        FastFood,
-        Drinks
-
+        public double MaxPrice();
+        public double MinPrice();
+        public double MiddlePrice();
     }
 }

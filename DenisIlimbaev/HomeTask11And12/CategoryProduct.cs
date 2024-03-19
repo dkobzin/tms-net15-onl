@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace HomeTask11
 {
-    enum CategoryFood
+    enum CategoryProduct
     {
-        Dairy,
-        Meat,
-        FastFood,
-        Drinks
+        Food,
+        Cosmetic,
 
     }
 }
