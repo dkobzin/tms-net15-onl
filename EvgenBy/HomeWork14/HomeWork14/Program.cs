@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text;
 using System.Text.Json;
 using System.Xml.Serialization;
 
@@ -10,6 +11,11 @@ namespace HomeWork14
     {
         static void Main(string[] args)
         {
+            Console.InputEncoding = Encoding.UTF8;
+            Console.OutputEncoding = Encoding.UTF8;
+            Console.OutputEncoding = Encoding.Unicode;
+            Console.InputEncoding = Encoding.Unicode;
+
             Console.WriteLine("Введите путь к указанной папке, содержащей Json файл.");
             string folderPath = Console.ReadLine();
 
