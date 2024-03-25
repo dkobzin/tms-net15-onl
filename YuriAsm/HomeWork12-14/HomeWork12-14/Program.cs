@@ -1,9 +1,4 @@
 ﻿using HomeWork12_14.HomeWork13;
-using HomeWork12_14.HomeWork14;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Xml;
-using System.Xml.Serialization;
 
 #region Валидация данных
 Console.Write("Get Login :");
