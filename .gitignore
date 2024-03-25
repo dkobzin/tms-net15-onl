@@ -1,4 +1,4 @@
-Ôªø################################################################################
+################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 /Lesson08/.vs/Lesson08
@@ -6,8 +6,8 @@
 /.vs/TMSLessons/v17
 /arsalfimov/Lesson08/TasksLesson8/.vs
 /arsalfimov/Lesson08/TasksLesson8/TasksLesson8/obj
-/EvgenBy/–ùome work 8/–ùome work 8/obj
-/EvgenBy/–ùome work 8/.vs/–ùome work 8
+/EvgenBy/Õome work 8/Õome work 8/obj
+/EvgenBy/Õome work 8/.vs/Õome work 8
 BelkL1ne/Homework 8/.vs
 BelkL1ne/Homework 8/Homework 8/obj
 /YuriAsm/HomeWork08/.vs/HomeWork08
@@ -99,7 +99,7 @@ MaksimKez/HW8/HW8/.vs
 /YuriAsm/Lesson10/.vs/ProjectEvaluation
 /YuriAsm/Lesson10/HomeWork10/bin/Debug/net8.0
 /YuriAsm/Lesson10/HomeWork10/obj
-/EvgenBy/–ùome work 8/.vs/ProjectEvaluation
+/EvgenBy/Õome work 8/.vs/ProjectEvaluation
 /YuriAsm/Lesson10/Lesso10/.vs/Lesso10/v17
 /YuriAsm/Lesson10/Lesso10/.vs
 /YuriAsm/HomeWork12.13.14
@@ -108,3 +108,37 @@ MaksimKez/HW8/HW8/.vs
 /YuriAsm/HomeWork12-14/HomeWork12-14/bin/Debug/net8.0
 /YuriAsm/HomeWork12-14/HomeWork12-14/obj
 /YuriAsm/ConsoleApp1
+MaksimKez/HW8/HW8/.vs
+MaksimKez/HW11/HW11/HW11/obj
+MaksimKez/HW11/HW11/.vs
+MaksimKez/HW11/HW11/HW11/bin
+/IraStef/DZLesson11/.vs
+/IraStef/DZLesson11/DZLesson11/bin/Debug/net8.0
+/IraStef/DZLesson11/DZLesson11/obj
+/IraStef/Lesson10/Lesson10work/.vs/ProjectEvaluation
+/ToffeeGalka/HomeWork11/.vs/HomeWork11
+/ToffeeGalka/HomeWork11/bin/Debug/net8.0
+/ToffeeGalka/HomeWork11/obj
+/ToffeeGalka/Lesson10/.vs/ProjectEvaluation
+/BelkL1ne/Homework 8/Homework8/obj
+/BelkL1ne/Homework 8/HomeWork8Interface/obj/Debug/net8.0
+/BelkL1ne/Homework 8/HomeWork8Interface/obj/Release/net8.0
+/Samples/Lesson10/Lesson10Work/Lesson10Work/obj/Debug/net8.0
+/Samples/Lesson11/Lesson11Attributes/obj/Debug/net8.0
+/Samples/Lesson11/Lesson11Lambdas/obj/Debug/net8.0
+/Samples/Lesson11/Lesson11Lambdas/obj/Release/net8.0
+/Samples/Lesson10/Lesson10Work/Lesson10Work/obj/Release/net8.0
+/PavelDev91/HomeWork10/obj/Release
+/Samples/Lesson11/Lesson11Attributes/obj/Release/net8.0
+/YuriAsm/Lesson10/.vs/Lesson10/DesignTimeBuild
+/YuriAsm/Lesson10/.vs/Lesson10/FileContentIndex
+/YuriAsm/Lesson10/.vs/Lesson10
+/YuriAsm/Lesson10/.vs/ProjectEvaluation
+/YuriAsm/Lesson10/HomeWork10/bin/Debug/net8.0
+/YuriAsm/Lesson10/HomeWork10/obj
+/YuriAsm/Lesson10/Lesso10/bin/Debug/net8.0
+/YuriAsm/Lesson10/Lesso10/obj/Debug/net8.0
+/YuriAsm/Lesson10/Lesso10/obj/Release/net8.0
+/YuriAsm/Lesson10/Lesso10/obj
+/arsalfimov/Lesson11/.vs/Lesson11
+/Samples/Lesson11/.vs
