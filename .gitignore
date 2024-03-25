@@ -1,4 +1,4 @@
-################################################################################
+﻿################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 /Lesson08/.vs/Lesson08
@@ -6,8 +6,8 @@
 /.vs/TMSLessons/v17
 /arsalfimov/Lesson08/TasksLesson8/.vs
 /arsalfimov/Lesson08/TasksLesson8/TasksLesson8/obj
-/EvgenBy/ ome work 8/ ome work 8/obj
-/EvgenBy/ ome work 8/.vs/ ome work 8
+/EvgenBy/Нome work 8/Нome work 8/obj
+/EvgenBy/Нome work 8/.vs/Нome work 8
 BelkL1ne/Homework 8/.vs
 BelkL1ne/Homework 8/Homework 8/obj
 /YuriAsm/HomeWork08/.vs/HomeWork08
@@ -66,7 +66,7 @@ MaksimKez/HW8/HW8/.vs
 /ToffeeGalka/Lesson10/.vs/Lesson10
 /ToffeeGalka/Lesson10/bin/Debug/net8.0-windows
 /ToffeeGalka/Lesson10/obj
-/EvgenBy/?ome work 8/?ome work 8/bin/Debug/net8.0
+/EvgenBy/Нome work 8/Нome work 8/bin/Debug/net8.0
 /YuriAsm/Lesson10/ConsoleApp1/.vs
 /YuriAsm/Lesson10/ConsoleApp1/ConsoleApp1/bin/Debug/net8.0
 /YuriAsm/Lesson10/ConsoleApp1/ConsoleApp1/obj/Debug/net8.0
@@ -100,18 +100,6 @@ MaksimKez/HW8/HW8/.vs
 /YuriAsm/Lesson10/.vs/ProjectEvaluation
 /YuriAsm/Lesson10/HomeWork10/bin/Debug/net8.0
 /YuriAsm/Lesson10/HomeWork10/obj
-<<<<<<< YuriAsmukovich-HomeWork10
-/EvgenBy/ ome work 8/.vs/ProjectEvaluation
-/YuriAsm/Lesson10/Lesso10/.vs/Lesso10/v17
-/YuriAsm/Lesson10/Lesso10/.vs
-/YuriAsm/HomeWork12.13.14
-/YuriAsm/HomeWork12-14/.vs/HomeWork12-14
-/YuriAsm/HomeWork12-14/.vs/ProjectEvaluation
-/YuriAsm/HomeWork12-14/HomeWork12-14/bin/Debug/net8.0
-/YuriAsm/HomeWork12-14/HomeWork12-14/obj
-/YuriAsm/ConsoleApp1
-=======
->>>>>>> YuriyAsmukovich
 MaksimKez/HW8/HW8/.vs
 MaksimKez/HW11/HW11/HW11/obj
 MaksimKez/HW11/HW11/.vs
@@ -145,8 +133,4 @@ MaksimKez/HW11/HW11/HW11/bin
 /YuriAsm/Lesson10/Lesso10/obj/Release/net8.0
 /YuriAsm/Lesson10/Lesso10/obj
 /arsalfimov/Lesson11/.vs/Lesson11
-<<<<<<< YuriAsmukovich-HomeWork10
 /Samples/Lesson11/.vs
-=======
-/Samples/Lesson11/.vs
->>>>>>> YuriyAsmukovich
