@@ -1,9 +1,13 @@
-﻿namespace HomeWork10.Data
+﻿using HomeWork10.Abstraction;
+using HomeWork10.Data.Services;
+using HomeWork10.Data.Services.Base;
+
+namespace HomeWork10.Data
 {
-    public class Inventory
+    public class Inventory : IInventory
     {
         private readonly List<Service> services;
-
+       
         public IEnumerable<Service> Services
         {
             get
@@ -12,7 +16,6 @@
                     yield return service;
             }
         }
-
         public decimal TotalPrice
             => Services.Sum(x => x.Price * x.Count);
         public int TotalCount
@@ -22,68 +25,60 @@
         {
             services = new List<Service>()
             {
-                new Service("Стол", 500m, 5),
-                new Service("Стул", 724m, 7),
-                new Service("Шкаф", 4712m, 13)
+                new Furniture("Мебель","Стол", 500m, 5, "Tree"),
+                new Furniture("Мебель", "Стул", 724m, 7),
+                new Furniture("Мебель", "Шкаф", 4712m, 13),
+                new Product("Продукты", "Хлеб", 24m, 13),
+                new Product("Продукты","Масло", 50m, 7)
             };
+
+            services.Sort();
         }
 
-        public InventoryResult AddServiceCount(Guid id, int count)
+        public IEnumerable<T> Get<T>() where T : Service
         {
-            if (id == default)
-                throw new ArgumentNullException(nameof(id));
+            List<T> result = new List<T>();
 
-            var currentService = Services.FirstOrDefault(x => x.Id == id);
+            foreach (var service in services)
+                if(service is T tService)
+                    result.Add(tService);
 
-            if (currentService == null)
-                return InventoryResult.Failed("Товар с таким ID не найден");
-
-            currentService.Supplement(count);
-
-            return InventoryResult.Completed();
-        }
-        public InventoryResult SubtractServiceCount(Guid id, int count)
-        {
-            if (id == default)
-                throw new ArgumentNullException(nameof(id));
-
-            var currentService = Services.FirstOrDefault(x => x.Id == id);
-
-            if (currentService == null)
-                return InventoryResult.Failed("Товар с таким ID не найден");
-
-            currentService.Subtract(count);
-
-            return InventoryResult.Completed();
+            return result;
         }
 
-        public InventoryResult RemoveService(Guid id)
+        public void AddService(Service service)
         {
-            if (id == default)
-                throw new ArgumentNullException(nameof(id));
-
-            var currentService = Services.FirstOrDefault(x => x.Id == id);
-
-            if (currentService == null)
-                return InventoryResult.Failed("Товар с таким ID не найден");
-
-            services.Remove(currentService);
-
-            return InventoryResult.Completed();
-        }
-        public InventoryResult AddService(Service service)
-        {
-            if (service == null)
+            if(service is null)
                 throw new ArgumentNullException(nameof(service));
 
-            var currentService = Services.FirstOrDefault(x => x.Name == service.Name);
-
-            if (currentService != null)
-                return InventoryResult.Failed("Товар с таким наименованием уже существует");
+            if (Services.Any(x => x.Id == service.Id))
+                throw new InvalidOperationException();
 
             services.Add(service);
+        }
 
-            return InventoryResult.Completed();
+        public void UpdateService(Service service)
+        {
+            if(service is null)
+                throw new ArgumentNullException(nameof(service));
+
+            if (services.Any(x => x.Id != service.Id))
+                throw new InvalidOperationException();
+
+            var currentService = Services.Single(x => x.Id == service.Id);
+
+            currentService.SetNewData(service);
+        }
+
+        public void DeleteService(Service service)
+        {
+            if (service is null)
+                throw new ArgumentNullException(nameof(service));
+
+            if (!Services.Any(x => x.Id == service.Id))
+                throw new InvalidOperationException();
+
+            services.RemoveAll(x => x.Id == service.Id);
         }
     }
 }

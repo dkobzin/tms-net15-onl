@@ -1,19 +1,20 @@
-﻿using HomeWork10.Data;
+﻿
+using HomeWork10.Data;
+using HomeWork10.Data.Services;
+using HomeWork10.Data.Services.Base;
 
 namespace HomeWork10
 {
 
     public class ProgramHelper
     {
-
-
         public void ShowServices(IEnumerable<Service> services)
         {
             Console.WriteLine("\nНаши товары\n");
 
             foreach (var service in services)
             {
-                Console.WriteLine(service.Id.ToString() + "\t" + service.Name + "\t" + service.Price + "\t" + service.Count);
+                Console.WriteLine(service.Id.ToString()+"\t"+ service.CategoryName + "\t" + service.Name + "\t" + service.Price + "\t" + service.Count);
             }
         }
 
@@ -27,10 +28,11 @@ namespace HomeWork10
             }
         }
 
-        public InventoryResult<Service> ShowAddService()
+        public ActionResult<Service> ShowAddService()
         {
             bool exit = false;
 
+            string? category = string.Empty;
             string? name = string.Empty;
             decimal price = 0m;
             int count = 0;
@@ -49,7 +51,7 @@ namespace HomeWork10
                     {
                         exit = true;
 
-                        return InventoryResult.Failed<Service>("Отменено пользователем");
+                        return ActionResult.Failed<Service>("Отменено пользователем");
                     }
                 }
 
@@ -63,7 +65,7 @@ namespace HomeWork10
                     {
                         exit = true;
 
-                        return InventoryResult.Failed<Service>("Отменено пользователем");
+                        return ActionResult.Failed<Service>("Отменено пользователем");
                     }
 
                     _ = decimal.TryParse(priceStr, out price);
@@ -79,20 +81,35 @@ namespace HomeWork10
                     {
                         exit = true;
 
-                        return InventoryResult.Failed<Service>("Отменено пользователем");
+                        return ActionResult.Failed<Service>("Отменено пользователем");
                     }
 
                     _ = int.TryParse(countStr, out count);
                 }
 
-                service = new Service(name, price, count);
+                ServiceType type = ServiceType.Furniture;
+
+                switch (type)
+                {
+                    case ServiceType.Furniture:
+                        service = new Furniture(category, name, price, count) ; 
+                        break;
+                    case ServiceType.Product:
+                        service = new Product(category, name, price, count);
+
+                        break;
+                    default:
+                        break;
+                }
+
+               
                 exit = true;
             }
 
-            return InventoryResult.Completed(service);
+            return ActionResult.Completed(service);
         }
 
-        public InventoryResult<int> ShowAddCount()
+        public ActionResult<int> ShowAddCount()
         {
             bool exit = false;
 
@@ -110,7 +127,7 @@ namespace HomeWork10
                     {
                         exit = true;
 
-                        return InventoryResult.Failed<int>("Отменено пользователем");
+                        return ActionResult.Failed<int>("Отменено пользователем");
                     }
 
                     _ = int.TryParse(countStr, out count);
@@ -119,14 +136,15 @@ namespace HomeWork10
                 exit = true;
             }
 
-            return InventoryResult.Completed(count);
+            return ActionResult.Completed(count);
         }
 
-        public InventoryResult<string> ShowInputId()
+        public ActionResult<string> ShowInputId()
         {
             Console.WriteLine("\nУкажите идентификатор\n");
 
             string? id = string.Empty;
+
             bool exit = false;
 
             while (!exit)
@@ -139,16 +157,17 @@ namespace HomeWork10
                     {
                         exit = true;
 
-                        return InventoryResult.Failed<string>("Отменено пользователем");
+                        return ActionResult.Failed<string>("Отменено пользователем");
                     }
                 }
 
                 exit = true;
             }
 
-            return InventoryResult.Completed(id);
+            return ActionResult.Completed(id);
         }
-        public bool ValidateGuid(InventoryResult<string> serviceId)
+
+        public bool ValidateGuid(ActionResult<string> serviceId)
         {
             if (!Guid.TryParse(serviceId.Data, out var _))
             {
@@ -161,7 +180,7 @@ namespace HomeWork10
             return true;
         }
 
-        public bool IsFailedOperation(InventoryResult inventoryResult)
+        public bool IsFailedOperation(ActionResult inventoryResult)
         {
             if (!inventoryResult.Succeseeded)
             {
