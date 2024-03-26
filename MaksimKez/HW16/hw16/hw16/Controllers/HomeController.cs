@@ -17,6 +17,12 @@ namespace hw16.Controllers
             _logger = logger;
         }
 
+        [HttpGet("/getMeetingRoomInfo")]
+         public Meeting GetMeeting() 
+        { 
+            return _meetingService.GetMeeting();
+        }
+
         public IActionResult Index()
         {
             return View();
