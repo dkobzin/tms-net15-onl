@@ -22,7 +22,7 @@ namespace Lesson10
             if (_fuelLevel > 0)
             {
                 Console.WriteLine("Автомобиль движется.");
-                _fuelLevel -= distance * _fuelConsumption;
+                
 
             }
             else
