@@ -17,10 +17,10 @@ namespace hw16.Controllers
             _logger = logger;
         }
 
-        [HttpGet("/getMeetingRoomInfo")]
-         public Meeting GetMeeting() 
+        [HttpGet("/getMeetingRoomSettingsInfo")]
+         public MeetingSettings GetSettings() 
         { 
-            return _meetingService.GetMeeting();
+            return _settingsService.GetSettings();
         }
 
         public IActionResult Index()
