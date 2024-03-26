@@ -11,7 +11,12 @@ namespace HomeWork14
     {
         static void Main(string[] args)
         {
-            
+
+            Console.InputEncoding = Encoding.UTF8;
+            Console.OutputEncoding = Encoding.UTF8;
+            Console.OutputEncoding = Encoding.Unicode;
+            Console.InputEncoding = Encoding.Unicode;
+
             Console.WriteLine("Введите путь к указанной папке, содержащей Json файл.");
             string folderPath = Console.ReadLine();
 
