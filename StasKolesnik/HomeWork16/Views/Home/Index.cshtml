@@ -1,0 +1,12 @@
+﻿@model MeetingSettingsModel
+@{
+    ViewData["Title"] = "Meeting Room";
+}
+
+<div class="text-center">
+    <h4 class="display-8">@Model.MeetingName</h4>
+    <p>Количество участников: @Model.PeopleCount</p>
+    <p>Дата проведения: @Model.MeetingDate</p>
+    <p>@Model.MeetingOwner</p>
+    <p>@Model.Description</p>
+</div>
