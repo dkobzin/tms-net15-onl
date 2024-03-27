@@ -1,9 +1,9 @@
-using HomeWork_14.Models;
-using HomeWork_14.Services;
+using HomeWork_16.Models;
+using HomeWork_16.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace HomeWork_14.Controllers
+namespace HomeWork_16.Controllers
 {
     public class HomeController : Controller
     {

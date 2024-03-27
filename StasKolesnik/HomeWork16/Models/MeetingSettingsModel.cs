@@ -1,4 +1,4 @@
-﻿namespace HomeWork_14.Models
+﻿namespace HomeWork_16.Models
 {
     public class MeetingSettingsModel
     {

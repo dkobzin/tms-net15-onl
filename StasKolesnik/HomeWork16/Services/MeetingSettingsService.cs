@@ -1,6 +1,6 @@
-﻿using HomeWork_14.Models;
+﻿using HomeWork_16.Models;
 
-namespace HomeWork_14.Services
+namespace HomeWork_16.Services
 {
     public class MeetingSettingsService
     {
