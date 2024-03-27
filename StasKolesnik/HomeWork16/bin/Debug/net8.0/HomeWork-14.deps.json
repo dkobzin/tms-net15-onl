@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "HomeWork-14/1.0.0": {
+        "runtime": {
+          "HomeWork-14.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HomeWork-14/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
