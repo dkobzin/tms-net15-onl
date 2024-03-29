@@ -20,9 +20,11 @@ namespace HomeWork16.Controllers
         {
             return _meetingRoomService.GetMeeting();
         }
+        [HttpGet("/Index")]
         public IActionResult Index()
         {
-            return View();
+            ViewBag.Meeting = _meetingRoomService.GetMeeting();
+            return View("Index");
         }
         public IActionResult Privacy()
         {

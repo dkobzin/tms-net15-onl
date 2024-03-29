@@ -4,9 +4,16 @@ namespace HomeWork16.Services
 {
     public class MeetingRoomService : IMeetingRoomService
     {
+        private readonly IConfiguration _configuration;
+        public MeetingRoomService(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
         public MeetingRoom GetMeeting() 
         {
-        return new MeetingRoom() { MaxPeople = 10, MaxTime = new TimeSpan (2, 45, 0) };
+            var peoples = _configuration.GetValue<int>("MaxPeople");
+            var durationMinutes = _configuration.GetValue<int>("MaxTime");
+        return new MeetingRoom() { MaxPeople = peoples, MaxTime = TimeSpan.FromMinutes(durationMinutes) };
         }
     }
 }

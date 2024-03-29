@@ -10,6 +10,7 @@ namespace HomeWork16
 
             
             builder.Services.AddControllersWithViews();
+
             builder.Services.AddTransient<IMeetingRoomService, MeetingRoomService>();
 
             var app = builder.Build();
