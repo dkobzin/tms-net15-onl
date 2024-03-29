@@ -10,10 +10,16 @@ namespace HomeWork_16.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly MeetingSettingsService _meetingSettings;
 
-        public HomeController(MeetingSettingsService meetingSettings, ILogger<HomeController> logger)
+        public HomeController(MeetingSettingsService meetingRoomSettings, ILogger<HomeController> logger)
         {
             _logger = logger;
-            _meetingSettings = meetingSettings;
+            _meetingSettings = meetingRoomSettings;
+        }
+
+        [HttpGet("/getMeetingRoom")]
+        public MeetingSettingsModel GetMeetingSettings()
+        {
+            return _meetingSettings.GetMeetingSettings();
         }
 
         public IActionResult Index()
