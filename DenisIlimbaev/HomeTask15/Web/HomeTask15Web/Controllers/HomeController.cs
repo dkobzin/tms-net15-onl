@@ -1,17 +1,19 @@
 using HomeTask15Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-
+using System.Text;
+using System.Text.Json;
 namespace HomeTask15Web.Controllers
 {
     public class HomeController : Controller
     {
-        private  SettingsService settings;
+        
         private readonly ILogger<HomeController> _logger;
-        public HomeController(ILogger<HomeController> logger)
+        private readonly ISettings _settings;
+        public HomeController(ISettings settings,ILogger<HomeController> logger)
         {
             _logger = logger;
-           
+            _settings = settings;
         }
 
         public IActionResult Index()
@@ -26,8 +28,8 @@ namespace HomeTask15Web.Controllers
        
         public IActionResult MeetingRoom()
         {
-            settings = HttpContext.RequestServices.GetService<SettingsService>() ?? new SettingsService();
-            settings.GetMeSettings(new Person() { Name = "Vasa", LastName ="Petrov", UserIsSharing=true});
+            
+           _settings.GetMeSettings();
             return View();
         }
 

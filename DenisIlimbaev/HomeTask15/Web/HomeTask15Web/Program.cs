@@ -12,7 +12,7 @@ namespace HomeTask15Web
 4. ѕередать в конструкторе контроллера класс сервиса комнаты и в методе GET вывести эти настройки
              */
             var builder = WebApplication.CreateBuilder(args);
-            builder.Services.AddTransient<SettingsService>(); 
+            builder.Services.AddTransient<ISettings,SettingsService>(); 
             
             // Add services to the container.
             builder.Services.AddControllersWithViews();
