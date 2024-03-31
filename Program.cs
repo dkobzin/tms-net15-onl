@@ -1,59 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HomeWork14_IvanNepo;
-    using System;
-
-class Program
+namespace hw16
 {
-    static void Main(string[] args)
+    public class Program
     {
-        if (args.Length == 0)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Не указан путь к папке с JSON файлом.");
-            return;
-        }
+            var builder = WebApplication.CreateBuilder(args);
 
-        string folderPath = args[0];
+            // Add services to the container.
+            builder.Services.AddControllersWithViews();
 
-        string[] jsonFiles = Directory.GetFiles(folderPath, "*.json");
+            var app = builder.Build();
 
-        if (jsonFiles.Length == 0)
-        {
-            Console.WriteLine("В указанной папке нет JSON файлов.");
-            return;
-        }
+            // Configure the HTTP request pipeline.
+            if (!app.Environment.IsDevelopment())
+            {
+                app.UseExceptionHandler("/Home/Error");
+                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                app.UseHsts();
+            }
 
-        if (jsonFiles.Length > 1)
-        {
-            Console.WriteLine("В указанной папке более одного JSON файла.");
-            return;
-        }
+            app.UseHttpsRedirection();
+            app.UseStaticFiles();
 
-        string jsonFilePath = jsonFiles[0];
+            app.UseRouting();
 
-        try
-        {
-            User user = JsonParser.ParseJson(jsonFilePath);
+            app.UseAuthorization();
 
-            string xmlFileName = $"user_{user.FirstName}_{user.LastName}.xml";
-            JsonParser.SaveAsXml(user, xmlFileName);
-            Console.WriteLine($"Объект User сохранен в файл: {xmlFileName}");
+            app.MapControllerRoute(
+                name: "default",
+                pattern: "{controller=Home}/{action=Index}/{id?}");
 
-            string jsonFileName = $"user_{user.FirstName}_{user.LastName}.json";
-            JsonParser.SaveAsJson(user, jsonFileName, compactFormat: false);
-            Console.WriteLine($"Объект User сохранен в файл: {jsonFileName}");
-
-            string compactJsonFileName = $"user_{user.FirstName}_{user.LastName}_compact.json";
-            JsonParser.SaveAsJson(user, compactJsonFileName, compactFormat: true);
-            Console.WriteLine($"Объект User сохранен в файл: {compactJsonFileName}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"Ошибка: {ex.Message}");
+            app.Run();
         }
     }
 }
