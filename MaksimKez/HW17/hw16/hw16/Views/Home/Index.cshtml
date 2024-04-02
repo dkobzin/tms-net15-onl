@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model hw16.Models.MeetingSettings
+
+
+
+<div class="text-center">
+     <h1>Enter new meeting room settings</h1>
+    <form method="post" action="ChangeMeetingSettings">
+        <div>
+            <p>Maximum Time</p>
+            <input type="time" value="@ViewBag.MaxTime" name="MaxTime"/>
+        </div>
+
+        <div>
+            <p>Maximum num of people</p>
+            <input type="text" value="@ViewBag.MaxPeople", name="MaxPeople"/>
+        </div>
+
+        <div>
+            <input type="submit" value="Change" />
+        </div>
+    </form>
+</div>
