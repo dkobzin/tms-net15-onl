@@ -3,6 +3,8 @@
 ################################################################################
 /Lesson08/.vs/Lesson08
 /.vs/*
+obj
+Debug
 /.vs/TMSLessons/v17
 /arsalfimov/Lesson08/TasksLesson8/.vs
 /arsalfimov/Lesson08/TasksLesson8/TasksLesson8/obj
@@ -224,4 +226,3 @@ MaksimKez/HW16/hw16/.vs
 /IraStef/DZLesson17/.vs/DZLesson17
 /IraStef/DZLesson17/DZLesson17/bin/Debug/net8.0
 /IraStef/DZLesson17/DZLesson17/obj
-/IraStef/DZLesson17/DZLesson17/wwwroot
