@@ -1,0 +1,14 @@
+﻿@model PersonViewModel
+@inject SampleWebApplicationModelView.Infrastructure.ITimeService timer;
+@{
+    ViewData["Title"] = "Home Page";
+    var modelTemp = Model;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>Id:@Model.Id</p>
+    <p>Name:@Model.Name</p>
+    <p> Current time: @timer.GetTime()</p>
+</div>
