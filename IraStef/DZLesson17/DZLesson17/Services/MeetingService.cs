@@ -1,28 +1,23 @@
 ﻿using DZLesson17.Models;
+using System.Text.Json;
 
 namespace DZLesson17.Services
 {
     public class MeetingService : IMeetingService
     {
-        private Meeting[] meetingStorage;
-        public MeetingService()
+        private IConfiguration configuration;
+        public MeetingService(IConfiguration configuration)
         {
-            meetingStorage = new Meeting[]
-            {
-                new Meeting(){Name = "Meeting1", PeopleCount = 55, MeetingMaxTime = new TimeSpan (5,30,0) },
-                new Meeting(){Name = "Meeting2", PeopleCount = 15, MeetingMaxTime = new TimeSpan (3,0,0) },
-                new Meeting(){Name = "Meeting3", PeopleCount = 5, MeetingMaxTime = new TimeSpan (1,30,0) }
-
-            };
+            this.configuration = configuration;
         }
         public Meeting[] GetMeetings()
         {
-            return meetingStorage;
+            var foo = configuration.GetSection("Meetings").Get<Meeting[]>();
+            return foo;
         }
         public void UpdateMeetings(Meeting[] meetings) 
         {
-            meetingStorage = meetings;
-        }
-        
+            configuration["Meetings"] = JsonSerializer.Serialize(meetings);
+        }   
     }
 }

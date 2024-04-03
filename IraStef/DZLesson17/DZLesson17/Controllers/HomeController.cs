@@ -15,32 +15,18 @@ namespace DZLesson17.Controllers
             _logger = logger;
             _meetingService = service;
         }
-        [HttpGet("/GetMeetings")]
-        public Meeting[] GetMeetings()
-        {
-            return _meetingService.GetMeetings();
-        }
 
-        [HttpPost("/UpdateMeetings")]
-        public void UpdateMeetings([FromBody] Meeting[] request)
+        [HttpPost]
+        public IActionResult UpdateMeetings([FromForm] Meeting[] request)
         {
             _meetingService.UpdateMeetings(request);
+            return View("Index", _meetingService.GetMeetings());
         }
 
         public IActionResult Index()
         {
-            return View();
+            return View("Index", _meetingService.GetMeetings());
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
 }

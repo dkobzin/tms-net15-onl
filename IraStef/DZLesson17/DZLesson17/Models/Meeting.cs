@@ -4,7 +4,7 @@
     {
         public string Name { get; set; }
         public int PeopleCount { get; set; }
-        public TimeSpan MeetingMaxTime { get; set; }
+        public int MeetingMaxTime { get; set; }
 
     }
 }
