@@ -1,4 +1,5 @@
 using DZLesson17.Services;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace DZLesson17
 {
@@ -11,7 +12,7 @@ namespace DZLesson17
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-            builder.Services.AddSingleton<IMeetingService, MeetingService>();
+            builder.Services.AddScoped<IMeetingService, MeetingService>();
 
             var app = builder.Build();
 
