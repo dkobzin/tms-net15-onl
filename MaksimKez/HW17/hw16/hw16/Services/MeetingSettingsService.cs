@@ -3,6 +3,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using System.Text.Json.Serialization;
+using System.Data;
+using System.Linq.Expressions;
+using System.Text.Json;
+using Newtonsoft.Json.Linq;
+
 
 namespace hw16.Services
 {
@@ -17,7 +22,14 @@ namespace hw16.Services
 
         void IGetRoomSettings.SaveSettings(MeetingSettings meetingSettings)
         {
-            
+            // изменить в appsettings.Development.json по ключу значения MeetingSettings
+            //var jsonStr = File.ReadAllText("appsettings.Development.json");
+            //var jsonSettingsToChange = System.Text.Json.JsonSerializer.Deserialize<MeetingSettings>(jsonStr);
+            //jsonSettingsToChange.MaxPeople = meetingSettings.MaxPeople;
+            //jsonSettingsToChange.MaxTime = meetingSettings.MaxTime;
+            //var 
+            _configuration["MeetingRoomSettings:MaxPeople"] = meetingSettings.MaxPeople.ToString();
+            _configuration["MeetingRoomSettings:MaxTime"] = meetingSettings.MaxTime.ToString();
         }
 
 
