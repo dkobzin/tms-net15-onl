@@ -10,9 +10,9 @@ namespace hw16.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly IGetRoomSettings _settingsService;
+        private readonly IMeetingSettingsServise _settingsService;
 
-        public HomeController(ILogger<HomeController> logger, IGetRoomSettings settings)
+        public HomeController(ILogger<HomeController> logger, IMeetingSettingsServise settings)
         {
             _settingsService = settings ?? throw new ArgumentNullException(nameof(settings));
             _logger = logger;
