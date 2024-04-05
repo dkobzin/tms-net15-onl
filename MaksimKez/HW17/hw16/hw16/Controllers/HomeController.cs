@@ -25,13 +25,9 @@ namespace hw16.Controllers
          }
  
         [HttpPost]
-        public IActionResult ChangeMeetingSettings(TimeSpan maxTime, int MaxPeople) 
+        public IActionResult ChangeMeetingSettings(MeetingSettings meetingSettings)
         {
-            var settings = _settingsService.GetSettings();
-            settings.MaxTime = maxTime;
-            settings.MaxPeople = MaxPeople;
-
-            _settingsService.SaveSettings(settings);
+            _settingsService.SaveSettings(meetingSettings);
 
             return RedirectToAction("MyTest");
         }
@@ -48,6 +44,7 @@ namespace hw16.Controllers
 
         public IActionResult MyTest()
         {
+
             var settings = _settingsService.GetSettings();
             return View(settings);
         }
