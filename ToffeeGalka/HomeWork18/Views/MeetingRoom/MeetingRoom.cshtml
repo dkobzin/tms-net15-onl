@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model MeetingRoom
+@{
+
+}
+<div class="text-center">
+    <h1 style="color:#ff0000">Welcome Meeting Room</h1>
+    <div class="row justify-content-center">
+        <h2 class="col-auto">People count:</h2> <h2 class="col-auto" style="color:#0000ff">@ViewBag.Meeting.MaxPeople</h2>
+        </div>
+
+    <div class="row justify-content-center">
+        <h2 class="col-auto">Meeting duration:</h2> <h2 class="col-auto" style="color:#0000ff">@ViewBag.Meeting.MaxTime</h2>
+    </div>
+    <h2 style="color:#00ff00">Edit Settings Meeting Room</h2>
+    <form method="post" action="~/MeetingEdit">
+    <div>
+        @Html.LabelFor(_ => _.MaxPeople)
+        @Html.EditorFor(_ => _.MaxPeople)
+    </div>
+    <div>
+        @Html.LabelFor(_ => _.MaxTime)
+        @Html.EditorFor(_ => _.MaxTime)
+    </div>
+    <div>
+        <input type="submit" value="Save Settings" />
+    </div>
+    </form>
+</div>
