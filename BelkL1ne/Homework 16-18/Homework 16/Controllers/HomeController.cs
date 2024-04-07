@@ -2,6 +2,7 @@ using Homework_16.Models;
 using Homework_16.Servicees;
 using Homework_16.Servicees.DTO;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using System.Diagnostics;
 
 namespace Homework_16.Controllers
@@ -11,16 +12,17 @@ namespace Homework_16.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly MeetingRoomService meetingRoomService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IConfiguration configuration)
         {
             _logger = logger;
-            meetingRoomService = new MeetingRoomService();
+            meetingRoomService = new MeetingRoomService(configuration);
+            
         }
         
         public IActionResult Index()
         {
             var meetingRoomViewModel = GetMeetingRoomViewModel(Guid.NewGuid());
-            return View(meetingRoomViewModel);
+            return View();
         }
 
         public MeetingRoomViewModel GetMeetingRoomViewModel(Guid id)
