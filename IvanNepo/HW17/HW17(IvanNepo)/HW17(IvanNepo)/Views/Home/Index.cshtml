@@ -1,0 +1,17 @@
+﻿@model MeetingRoomSettings
+
+<h1>Meeting Room Settings</h1>
+
+<form asp-action="UpdateSettings" method="post">
+    <div>
+        <label asp-for="MaxPeople">Max People:</label>
+        <input asp-for="MaxPeople" />
+    </div>
+    <div>
+        <label asp-for="MaxMeetingTime">Max Meeting Time:</label>
+        <input asp-for="MaxMeetingTime" />
+    </div>
+    <button type="submit">Save</button>
+</form>
+<form asp-controller="MeetingRoom" asp-action="UpdateSettings" asp-route-roomName="@Model.RoomName" method="post">
+</form>
