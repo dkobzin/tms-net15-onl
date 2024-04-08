@@ -20,23 +20,21 @@ namespace HomeWork18.Controllers
         {
             return _meetingRoomService.GetMeeting();
         }
+
         [HttpGet("/Index")]
         public IActionResult Index()
-        {
-            ViewBag.Meeting = _meetingRoomService.GetMeeting();
-            return View("MeetingRoom");
+        { 
+            return View("MeetingRoom", _meetingRoomService.GetMeeting());
         }
-
+     
         [HttpPost("/MeetingEdit")]
-        public IActionResult EditRoom()
+        public IActionResult EditRoom([FromForm] MeetingRoom request)
         {
             int maxPeople = Int32.Parse(Request.Form.FirstOrDefault(p => p.Key == "MaxPeople").Value!);
             int maxTime = Int32.Parse(Request.Form.FirstOrDefault(p => p.Key == "MaxTime").Value!);
             var res = _meetingRoomService.EditRoom(new MeetingRoomEdit() { MaxPeople = maxPeople, MaxTime = maxTime });
-            ViewBag.Meeting = _meetingRoomService.GetMeeting();
-            return View("MeetingRoom");
+            return View("MeetingRoom", _meetingRoomService.GetMeeting ());
         }
-
 
         public IActionResult Privacy()
         {

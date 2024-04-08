@@ -8,11 +8,11 @@
 <div class="text-center">
     <h1 style="color:#ff0000">Welcome Meeting Room</h1>
     <div class="row justify-content-center">
-        <h2 class="col-auto">People count:</h2> <h2 class="col-auto" style="color:#0000ff">@ViewBag.Meeting.MaxPeople</h2>
+        <h2 class="col-auto">People count:</h2> <h2 class="col-auto" style="color:#0000ff">@Model.MaxPeople</h2>
         </div>
 
     <div class="row justify-content-center">
-        <h2 class="col-auto">Meeting duration:</h2> <h2 class="col-auto" style="color:#0000ff">@ViewBag.Meeting.MaxTime</h2>
+        <h2 class="col-auto">Meeting duration:</h2> <h2 class="col-auto" style="color:#0000ff">@Model.MaxTime</h2>
     </div>
     <h2 style="color:#00ff00">Edit Settings Meeting Room</h2>
     <form method="post" action="~/MeetingEdit">
