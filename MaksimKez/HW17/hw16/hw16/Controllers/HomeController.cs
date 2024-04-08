@@ -28,6 +28,7 @@ namespace hw16.Controllers
         public IActionResult ChangeMeetingSettings(MeetingSettings meetingSettings)
         {
             _settingsService.SaveSettings(meetingSettings);
+            ViewBag.MeetingSettings = meetingSettings;
 
             return RedirectToAction("MyTest");
         }

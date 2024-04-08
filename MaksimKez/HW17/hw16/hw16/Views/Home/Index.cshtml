@@ -10,12 +10,12 @@
     <form method="post" action="ChangeMeetingSettings">
         <div>
             <p>Maximum Time</p>
-            <input type="time" value="@ViewBag.MaxTime" name="MaxTime"/>
+            <input type="time" @ViewBag.MaxTime,  name="MaxTime"/>
         </div>
 
         <div>
             <p>Maximum num of people</p>
-            <input type="text" value="@ViewBag.MaxPeople", name="MaxPeople"/>
+            <input type="text" @ViewBag.MaxPeople, name="MaxPeople" />
         </div>
 
         <div>

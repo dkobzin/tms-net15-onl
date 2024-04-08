@@ -19,18 +19,27 @@ namespace hw16.Services
            _configuration = configuration;
         }
 
-        void IMeetingSettingsServise.SaveSettings(MeetingSettings meetingSettings)
-        {
-            _configuration["MeetingRoomSettings"] = JsonSerializer.Serialize(meetingSettings);
-        }
-
-
         public MeetingSettings GetSettings()
         {
             var meetingRoomSettings = _configuration.GetSection("MeetingRoomSettings")
                 .Get<MeetingSettings>() ?? throw new ArgumentNullException();
-            // подойдет ли такое исключение для этой ситуации?
             return meetingRoomSettings;
         }
+
+        void IMeetingSettingsServise.SaveSettings(MeetingSettings meetingSettings)
+        {
+            var settingsPath = Path.Combine(Directory.GetCurrentDirectory(), "appsettings.Development.json");
+            var appSettingsJson = File.ReadAllText(settingsPath) ?? throw new NullReferenceException("File does not exists");
+
+            var appSettings = JObject.Parse(appSettingsJson);
+
+            appSettings["MeetingRoomSettings"]["MaxPeople"] = meetingSettings.MaxPeople; 
+            appSettings["MeetingRoomSettings"]["MaxTime"] = meetingSettings.MaxTime; 
+
+            File.WriteAllText(settingsPath, appSettings.ToString());
+
+            ((IConfigurationRoot)_configuration).Reload();
+        }
+
     }
 }
