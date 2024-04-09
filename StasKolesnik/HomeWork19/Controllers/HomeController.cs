@@ -39,6 +39,11 @@ namespace HomeWork_16.Controllers
             return View();
         }
 
+        public IActionResult TestException()
+        {
+            throw new InvalidOperationException("This is a test exception!");
+        }
+
         public IActionResult Index()
         {
             MeetingSettingsModel settings = _meetingSettings.GetMeetingSettings();
@@ -46,6 +51,11 @@ namespace HomeWork_16.Controllers
         }
 
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult Error()
         {
             return View();
         }
