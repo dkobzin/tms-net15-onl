@@ -6,4 +6,5 @@
         public int MaxPeople { get; set; }
         public TimeSpan MaxMeetingDuration { get; set; }
     }
+}
 
