@@ -1,3 +1,4 @@
+using HomeWork_16.Filters;
 using HomeWork_16.Models;
 using HomeWork_16.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -16,7 +17,7 @@ namespace HomeWork_16.Controllers
         {
             _logger = logger;
             _meetingSettings = meetingRoomSettings;
-            
+
         }
 
         [HttpGet("/getMeetingRoom")]
@@ -25,6 +26,7 @@ namespace HomeWork_16.Controllers
             return _meetingSettings.GetMeetingSettings();
         }
 
+        [RequestTimingFilter]
         [HttpPost]
         public IActionResult NewSettings(MeetingSettingsModel model)
         {
