@@ -1,0 +1,26 @@
+﻿@model LoginViewModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+<form method="post" asp>
+    @*<label for="Login">Login:</label><br />
+    <input id="Login" type="text" name="Login" /><br /><br />
+    <label for="Password">Password:</label><br />
+    <input id="Password" type="text" name="Password" /><br /><br />
+    <input type="submit" value="Save"  />*@
+    <div>
+        @Html.LabelFor(_ => _.Login)
+        @Html.EditorFor(_ =>_.Login)
+    </div>
+    <div>
+        @Html.LabelFor(_ => _.Password)
+        @Html.EditorFor(_ => _.Password)
+    </div>
+    <div>
+        <input type="submit" value="Save" />
+    </div>
+    <timer></timer>
+</form>
+

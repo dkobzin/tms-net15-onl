@@ -1,0 +1,30 @@
+﻿@model MeetingSettingsModel
+@{
+    ViewData["Title"] = "Meeting Room";
+}
+
+<form asp-action="NewSettings" asp-controller="Home" method="post" class="p-4 border rounded" style="max-width: 600px; margin: 20px auto;">
+    <div class="mb-3">
+        <label for="MeetingName" class="form-label">Название конференции:</label>
+        @Html.TextBoxFor(m => m.MeetingName, new { @class = "form-control" })
+    </div>
+    <div class="mb-3">
+        <label for="PeopleCount" class="form-label">Количество участников:</label>
+        @Html.TextBoxFor(m => m.PeopleCount, new { @class = "form-control" })
+    </div>
+    <div class="mb-3">
+        <label for="MeetingDate" class="form-label">Дата проведения:</label>
+        @Html.TextBoxFor(m => m.MeetingDate, new { @class = "form-control" })
+    </div>
+    <div class="mb-3">
+        <label for="MeetingOwner" class="form-label">Хост:</label>
+        @Html.TextBoxFor(m => m.MeetingOwner, new { @class = "form-control" })
+    </div>
+    <div class="mb-3">
+        <label for="Description" class="form-label">Описание:</label>
+        @Html.TextBoxFor(m => m.Description, new { @class = "form-control" })
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+        
