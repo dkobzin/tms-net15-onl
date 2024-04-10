@@ -10,24 +10,23 @@ namespace Homework_16.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly MeetingRoomService meetingRoomService;
+        private readonly IMeetingRoomService _meetingRoomService;
 
-        public HomeController(ILogger<HomeController> logger, IConfiguration configuration)
+        public HomeController(ILogger<HomeController> logger, IMeetingRoomService meetingRoomService)
         {
             _logger = logger;
-            meetingRoomService = new MeetingRoomService(configuration);
+            _meetingRoomService = meetingRoomService;
             
         }
         
         public IActionResult Index()
         {
-            var meetingRoomViewModel = GetMeetingRoomViewModel(Guid.NewGuid());
             return View();
         }
 
         public MeetingRoomViewModel GetMeetingRoomViewModel(Guid id)
         {
-            var meetingRoom = meetingRoomService.GetMeetingRoom(Guid.NewGuid());
+            var meetingRoom = _meetingRoomService.GetMeetingRoom(Guid.NewGuid());
             var meetingRoomViewModel = new MeetingRoomViewModel
             {
                 Id = meetingRoom.Id,
@@ -55,7 +54,7 @@ namespace Homework_16.Controllers
                 MaxPeople = model.MaxPeople,
                 Duration = model.Duration
             };
-            meetingRoomService.SaveMeetingRoomService(meetingRoomDTO);
+            _meetingRoomService.SaveMeetingRoomService(meetingRoomDTO);
             return View("Success");
         }
         public IActionResult Privacy()

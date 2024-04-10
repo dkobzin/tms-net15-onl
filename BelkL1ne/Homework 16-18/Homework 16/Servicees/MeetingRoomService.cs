@@ -14,22 +14,18 @@ namespace Homework_16.Servicees
 {
     public class MeetingRoomService : IMeetingRoomService
     {
-        protected ApplicationDbContext applicationDbContext { get; set; }
         private readonly IConfiguration configuration;
         public MeetingRoomService(IConfiguration configuration)
         {
-            applicationDbContext = new ApplicationDbContext();
             this.configuration = configuration;
         }
 
 
         public MeetingRoomDTO GetMeetingRoom(Guid id)
         {
-
-            var meetingRoom = applicationDbContext.GetMeetingRoom(id);
             return new MeetingRoomDTO
             {
-                Id = meetingRoom.Id,
+                Id = id,
                 Name = configuration.GetValue<string>("Name"),
                 MaxPeople = configuration.GetValue<int>("MaxPeople"),
                 Duration = configuration.GetValue<TimeSpan>("Duration"),
@@ -42,7 +38,6 @@ namespace Homework_16.Servicees
             configuration["MaxPeople"] = model.MaxPeople.ToString();
             configuration["Duration"] = model.Duration.ToString();
 
-            
             //var saveMeetengRoom = new MeetingRoom
             //{ 
             //    Id = model.Id,

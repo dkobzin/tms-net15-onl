@@ -1,7 +1,10 @@
-﻿namespace Homework_16.Servicees
+﻿using Homework_16.Servicees.DTO;
+
+namespace Homework_16.Servicees
 {
     public interface IMeetingRoomService
     {
-        public void GetMeetingRoom() { }
+        public MeetingRoomDTO GetMeetingRoom(Guid id);
+        public void SaveMeetingRoomService(MeetingRoomDTO model);
     }
 }
