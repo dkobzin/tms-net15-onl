@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\C#\\Homework\\Homework 16\\Homework 16\\Homework 16.csproj",
+      "projectUniqueName": "G:\\C#\\tms-net15-onl\\BelkL1ne\\Homework 16-18\\Homework 16\\Homework 16.csproj",
       "projectName": "Homework 16",
-      "projectPath": "G:\\C#\\Homework\\Homework 16\\Homework 16\\Homework 16.csproj",
+      "projectPath": "G:\\C#\\tms-net15-onl\\BelkL1ne\\Homework 16-18\\Homework 16\\Homework 16.csproj",
       "packagesPath": "C:\\Users\\_Belk_\\.nuget\\packages\\",
-      "outputPath": "G:\\C#\\Homework\\Homework 16\\Homework 16\\obj\\",
+      "outputPath": "G:\\C#\\tms-net15-onl\\BelkL1ne\\Homework 16-18\\Homework 16\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\_Belk_\\AppData\\Roaming\\NuGet\\NuGet.Config",

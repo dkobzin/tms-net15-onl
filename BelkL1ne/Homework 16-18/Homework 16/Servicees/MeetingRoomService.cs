@@ -2,45 +2,56 @@
 using Homework_16.DAL.Entities;
 using Homework_16.Servicees.DTO;
 using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text.Json;
+using System.Configuration;
 
 
 namespace Homework_16.Servicees
 {
     public class MeetingRoomService : IMeetingRoomService
     {
-        protected ApplicationDbContext applicationDbContext {  get; set; }
-        public MeetingRoomService() 
+        protected ApplicationDbContext applicationDbContext { get; set; }
+        private readonly IConfiguration configuration;
+        public MeetingRoomService(IConfiguration configuration)
         {
             applicationDbContext = new ApplicationDbContext();
+            this.configuration = configuration;
         }
-        
+
+
         public MeetingRoomDTO GetMeetingRoom(Guid id)
         {
+
             var meetingRoom = applicationDbContext.GetMeetingRoom(id);
             return new MeetingRoomDTO
             {
                 Id = meetingRoom.Id,
-                Name = meetingRoom.Name,
-                MaxPeople = meetingRoom.MaxPeople,
-                Duration = meetingRoom.Duration,
+                Name = configuration.GetValue<string>("Name"),
+                MaxPeople = configuration.GetValue<int>("MaxPeople"),
+                Duration = configuration.GetValue<TimeSpan>("Duration"),
             };
         }
 
         public void SaveMeetingRoomService(MeetingRoomDTO model) 
         {
-            var saveMeetengRoom = new MeetingRoom
-            { 
-                Id = model.Id,
-                Name = model.Name,
-                Duration = model.Duration,
-                MaxPeople = model.MaxPeople
-            };
+            configuration["Name"] = model.Name.ToString();
+            configuration["MaxPeople"] = model.MaxPeople.ToString();
+            configuration["Duration"] = model.Duration.ToString();
 
-            applicationDbContext.SaveMeetingRoom(saveMeetengRoom);
+            
+            //var saveMeetengRoom = new MeetingRoom
+            //{ 
+            //    Id = model.Id,
+            //    Name = model.Name,
+            //    Duration = model.Duration,
+            //    MaxPeople = model.MaxPeople
+            //};
+
+            //applicationDbContext.SaveMeetingRoom(saveMeetengRoom);
         }
     }
 }

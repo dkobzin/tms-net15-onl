@@ -30,3 +30,35 @@ G:\C#\Homework\Homework 16\Homework 16\obj\Debug\net8.0\Homework 16.pdb
 G:\C#\Homework\Homework 16\Homework 16\obj\Debug\net8.0\Homework 16.genruntimeconfig.cache
 G:\C#\Homework\Homework 16\Homework 16\obj\Debug\net8.0\ref\Homework 16.dll
 G:\C#\Homework\Homework 16\Homework 16\bin\Debug\net8.0\MeetingRoomSettings.json
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\obj\Debug\net8.0\Homework 16.GeneratedMSBuildEditorConfig.editorconfig
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\obj\Debug\net8.0\Homework 16.AssemblyInfoInputs.cache
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\obj\Debug\net8.0\Homework 16.AssemblyInfo.cs
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\obj\Debug\net8.0\Homework 16.csproj.CoreCompileInputs.cache
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\obj\Debug\net8.0\Homework 16.MvcApplicationPartsAssemblyInfo.cache
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\obj\Debug\net8.0\Homework 16.RazorAssemblyInfo.cache
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\obj\Debug\net8.0\Homework 16.RazorAssemblyInfo.cs
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\obj\Debug\net8.0\Homework 16.sourcelink.json
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\obj\Debug\net8.0\Homework 16.dll
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\obj\Debug\net8.0\refint\Homework 16.dll
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\obj\Debug\net8.0\Homework 16.pdb
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\bin\Debug\net8.0\appsettings.Development.json
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\bin\Debug\net8.0\appsettings.json
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\bin\Debug\net8.0\Homework 16.staticwebassets.runtime.json
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\bin\Debug\net8.0\Homework 16.exe
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\bin\Debug\net8.0\Homework 16.deps.json
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\bin\Debug\net8.0\Homework 16.runtimeconfig.json
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\bin\Debug\net8.0\Homework 16.dll
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\bin\Debug\net8.0\Homework 16.pdb
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\obj\Debug\net8.0\staticwebassets.build.json
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\obj\Debug\net8.0\staticwebassets.development.json
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\obj\Debug\net8.0\staticwebassets\msbuild.Homework 16.Microsoft.AspNetCore.StaticWebAssets.props
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\obj\Debug\net8.0\staticwebassets\msbuild.build.Homework 16.props
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Homework 16.props
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Homework 16.props
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\obj\Debug\net8.0\staticwebassets.pack.json
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\obj\Debug\net8.0\scopedcss\bundle\Homework 16.styles.css
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\obj\Debug\net8.0\scopedcss\projectbundle\Homework 16.bundle.scp.css
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\obj\Debug\net8.0\Homework 16.genruntimeconfig.cache
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\obj\Debug\net8.0\ref\Homework 16.dll
+G:\C#\tms-net15-onl\BelkL1ne\Homework 16-18\Homework 16\bin\Debug\net8.0\MeetingRoomSettings.json

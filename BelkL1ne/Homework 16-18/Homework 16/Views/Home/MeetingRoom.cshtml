@@ -1,10 +1,20 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model MeetingRoomViewModel
 @{
     var model = Model;
+    
 }
-<form method="post" asp>
+<form method="get" action="~/Home/MeetingRoom" asp>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Id:@Model.Id </p>
+    <p>Name:@Model.Name </p>
+    <p>MaxPeople:@Model.MaxPeople </p>
+    <p>Duration:@Model.Duration </p>
+</div>
+</form>
+
+
+<form method="post" action="~/Home/MeetingRoom" asp>
     <label>Name:</label><br />
     <input id="Name" type="text" name="Name" /><br />
     <label>MapPeople:</label><br />
