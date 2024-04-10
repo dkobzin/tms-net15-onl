@@ -5,6 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<MeetingSettingsService>();
+builder.Services.AddTransient<ExceptionMiddleware>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -15,7 +16,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 app.UseExceptionHandler("/Home/Error");
-app.UseMiddleware<ExeptionMiddleware>();
+app.UseMiddleware<ExceptionMiddleware>();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 

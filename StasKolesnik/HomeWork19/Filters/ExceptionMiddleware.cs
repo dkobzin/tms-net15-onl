@@ -1,20 +1,14 @@
 ﻿namespace HomeWork_16.Filters
 {
-    public class ExeptionMiddleware
+    public class ExceptionMiddleware : IMiddleware
     {
-        private readonly RequestDelegate _next;
-
-        public ExeptionMiddleware(RequestDelegate next)
-        {
-            _next = next;
-        }
-
-        public async Task InvokeAsync(HttpContext context)
+        public async Task InvokeAsync(HttpContext context, RequestDelegate _next)
         {
             try
             {
-                await _next(context);
                 await Console.Out.WriteLineAsync("Обработана ошибка");
+                await _next(context);
+
             }
             catch (InvalidOperationException)
             {
