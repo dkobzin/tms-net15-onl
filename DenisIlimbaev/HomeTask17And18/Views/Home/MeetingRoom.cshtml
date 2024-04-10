@@ -1,0 +1,30 @@
+﻿@model MainSettingsModel
+@{
+    ViewData["Title"] = "Meeting Room"; 
+    IDictionary<string,string> Parametrs = new Dictionary<string,string>();
+    MainSettingsModel model = Model;
+    var userP = model.Container.UserSettings;
+    var generalP = model.Container.GeneralSettings;
+    foreach(var el in userP.GetType().GetProperties())
+    {
+        Parametrs.Add(el.Name + ":", (el.GetValue(userP)!).ToString()!);
+    }
+    foreach (var el in generalP.GetType().GetProperties())
+    {
+        Parametrs.Add(el.Name + ":", (el.GetValue(generalP)!).ToString()!);
+    }
+}
+<link rel="stylesheet" href="../css/MeetingRoom.css" type="text/css" />
+<div class="Container">
+    <myheader/>
+        <div class="exR">
+            <div class="inR">
+                <ul>
+                   @foreach(var i in Parametrs)
+                   {
+                    <li>@i.Key @i.Value</li>
+                   }
+                </ul>
+            </div>
+        </div>
+    </div>
