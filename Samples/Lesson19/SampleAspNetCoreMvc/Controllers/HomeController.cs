@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using SampleAspNetCoreMvc.Models;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Filters;
+using SampleAspNetCoreMvc.Services;
 
 namespace SampleAspNetCoreMvc.Controllers
 {
@@ -10,19 +12,30 @@ namespace SampleAspNetCoreMvc.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly IUserService _userService;
+        
+        public HomeController(ILogger<HomeController> logger, IUserService userService)
         {
             _logger = logger;
+            _userService = userService;
         }
 
         [AllowAnonymous]
         [SimpleActionFilter]
+        [HttpGet]
         public IActionResult Index()
         {
-            return View();
+            var user = _userService.GetById(1);
+            return View("Index", user);
         }
 
+        [HttpPost]
+        public IActionResult User([FromForm] UserModel user)
+        {
+            _userService.Save(user);
+            return RedirectToAction("Index");
+        }
+        
         [CustomActionResourceFilter("F6FF73E5-56FC-4B20-B81E-9D80CDDA2238", nameof(Privacy))]
         public IActionResult Privacy()
         {

@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using SampleAspNetCoreMvc;
 using SampleAspNetCoreMvc.Data;
+using SampleAspNetCoreMvc.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +22,8 @@ builder.Services.AddMvcCore(options =>
 });
 
 builder.Services.AddSingleton<TimeMiddleware>();
+
+builder.Services.AddScoped<IUserService, UserService>();
 
 var app = builder.Build();
 
