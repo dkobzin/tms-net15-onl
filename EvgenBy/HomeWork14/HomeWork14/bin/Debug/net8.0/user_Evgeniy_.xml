@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<User xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <FirstName>Evgeniy</FirstName>
+  <Age>34</Age>
+  <IDCard>0</IDCard>
+</User>

@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var id = (int)@Model;
+    var viewDataId = ViewData["ViewDataId"];
+    var viewBagId = ViewBag.Id;
+    var tempDataId = TempData["TempDataId"];
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p> Parameter @Model</p>
+    <p> Parameter @id</p>
+    <p> Parameter from ViewData @viewDataId</p>
+    <p> Parameter from ViewBag @viewBagId</p>
+    <p> Parameter from TempData @tempDataId</p>
+    <form method="post" action="~/Home/Save">
+        <label>First Name:</label><br />
+        <input type="text" name="FirstName" /><br />
+        <input type="submit" value="Save" />
+    </form>
+</div>
