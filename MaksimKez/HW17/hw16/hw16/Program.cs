@@ -11,7 +11,7 @@ namespace hw16
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-            builder.Services.AddTransient<IGetRoomSettings, MeetingSettingsService>();
+            builder.Services.AddScoped<IMeetingSettingsServise, MeetingSettingsService>();
 
             var app = builder.Build();
             // Configure the HTTP request pipeline.

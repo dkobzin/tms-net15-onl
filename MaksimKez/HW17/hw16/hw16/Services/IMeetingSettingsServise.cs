@@ -2,7 +2,7 @@
 
 namespace hw16.Services
 {
-    public interface IGetRoomSettings
+    public interface IMeetingSettingsServise
     {
         void SaveSettings(MeetingSettings meetingSettings);
         MeetingSettings GetSettings();
