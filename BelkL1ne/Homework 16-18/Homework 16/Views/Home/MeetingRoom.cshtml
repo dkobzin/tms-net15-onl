@@ -1,0 +1,25 @@
+﻿@model MeetingRoomViewModel
+@{
+    var model = Model;
+    
+}
+<form method="get" action="~/Home/MeetingRoom" asp>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Id:@Model.Id </p>
+    <p>Name:@Model.Name </p>
+    <p>MaxPeople:@Model.MaxPeople </p>
+    <p>Duration:@Model.Duration </p>
+</div>
+</form>
+
+
+<form method="post" action="~/Home/MeetingRoom" asp>
+    <label>Name:</label><br />
+    <input id="Name" type="text" name="Name" /><br />
+    <label>MapPeople:</label><br />
+    <input id="MaxPeople" type="number" name="MaxPeople" /><br />
+    <label>Duration:</label><br />
+    <input id="Duration" type="time" name="Duration" /><br />
+    <input type="submit" value="Send" />
+</form>
