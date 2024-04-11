@@ -1,0 +1,16 @@
+﻿@model UserModel 
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    @using (Html.BeginForm("User", "Home", FormMethod.Post))
+    {
+        <p>@Html.LabelFor(_ =>_.Id) @Html.EditorFor(p => p.Id)</p>
+        <p>@Html.LabelFor(_ => _.FirstName) @Html.EditorFor(p => p.FirstName)</p>
+        @Html.ActionLink("Save", "Post", new {user = Model})
+        <button type="submit" asp-action="User" asp-route-user="@Model">Save User</button>
+    }
+</div>

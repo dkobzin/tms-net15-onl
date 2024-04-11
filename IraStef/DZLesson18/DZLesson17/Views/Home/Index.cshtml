@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model DZLesson18.Models.MeetingView
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Meetings</p>
+
+    <form method="post" action="/Home/UpdateMeetings">
+        @for(int i = 0; i < Model.Meetings.Length; i++)
+        {
+            <div class="row justify-content-center">
+                <div class="flex-column col-auto align-items-end">
+                    <label>Название: </label>
+                    <input type="text" asp-for="@Model.Meetings[i].Name" />
+                    <br />
+                    <label>Кол-во человек: </label>
+                    <input type="text" asp-for="@Model.Meetings[i].PeopleCount" />
+                    <br/>
+                    <label>Длительность в минутах: </label>
+                    <input type="text" asp-for="@Model.Meetings[i].MeetingMaxTime" />
+                    <br />
+                    <hr/>
+                </div>
+            </div>
+        }
+        <input type="submit" value="Submit"/>
+    </form>
+</div>
