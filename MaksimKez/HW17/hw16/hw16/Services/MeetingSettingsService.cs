@@ -22,14 +22,17 @@ namespace hw16.Services
 
         void IGetRoomSettings.SaveSettings(MeetingSettings meetingSettings)
         {
-            // изменить в appsettings.Development.json по ключу значения MeetingSettings
-            //var jsonStr = File.ReadAllText("appsettings.Development.json");
-            //var jsonSettingsToChange = System.Text.Json.JsonSerializer.Deserialize<MeetingSettings>(jsonStr);
-            //jsonSettingsToChange.MaxPeople = meetingSettings.MaxPeople;
-            //jsonSettingsToChange.MaxTime = meetingSettings.MaxTime;
-            //var 
-            _configuration["MeetingRoomSettings:MaxPeople"] = meetingSettings.MaxPeople.ToString();
-            _configuration["MeetingRoomSettings:MaxTime"] = meetingSettings.MaxTime.ToString();
+            var settingsPath = Path.Combine(Directory.GetCurrentDirectory(), "appsettings.Development.json");
+            var appSettingsJson = File.ReadAllText(settingsPath) ?? throw new NullReferenceException("File does not exists");
+
+            var appSettings = JObject.Parse(appSettingsJson);
+
+            appSettings["MeetingRoomSettings"]["MaxPeople"] = meetingSettings.MaxPeople;
+            appSettings["MeetingRoomSettings"]["MaxTime"] = meetingSettings.MaxTime;
+
+            File.WriteAllText(settingsPath, appSettings.ToString());
+
+            ((IConfigurationRoot)_configuration).Reload();
         }
 
 
