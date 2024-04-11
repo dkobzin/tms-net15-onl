@@ -19,6 +19,13 @@ namespace hw16.Services
            _configuration = configuration;
         }
 
+        public MeetingSettings GetSettings()
+        {
+            var meetingRoomSettings = _configuration.GetSection("MeetingRoomSettings")
+                .Get<MeetingSettings>() ?? throw new ArgumentNullException();
+            return meetingRoomSettings;
+        }
+
         void IMeetingSettingsServise.SaveSettings(MeetingSettings meetingSettings)
         {
             var settingsPath = Path.Combine(Directory.GetCurrentDirectory(), "appsettings.Development.json");
@@ -32,14 +39,6 @@ namespace hw16.Services
             File.WriteAllText(settingsPath, appSettings.ToString());
 
             ((IConfigurationRoot)_configuration).Reload();
-        }
-
-
-        public MeetingSettings GetSettings()
-        {
-            var meetingRoomSettings = _configuration.GetSection("MeetingRoomSettings")
-                .Get<MeetingSettings>() ?? throw new ArgumentNullException();
-            return meetingRoomSettings;
         }
     }
 }
