@@ -33,13 +33,12 @@ namespace hw16.Services
 
             var appSettings = JObject.Parse(appSettingsJson);
 
-            appSettings["MeetingRoomSettings"]["MaxPeople"] = meetingSettings.MaxPeople; 
-            appSettings["MeetingRoomSettings"]["MaxTime"] = meetingSettings.MaxTime; 
+            appSettings["MeetingRoomSettings"]["MaxPeople"] = meetingSettings.MaxPeople;
+            appSettings["MeetingRoomSettings"]["MaxTime"] = meetingSettings.MaxTime;
 
             File.WriteAllText(settingsPath, appSettings.ToString());
 
             ((IConfigurationRoot)_configuration).Reload();
         }
-
     }
 }

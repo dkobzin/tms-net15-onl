@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model hw16.Models.MeetingSettings
+
+
+
+<div class="container mt-5 bg-primary">
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">Meeting Settings</h2>
+            <form asp-action="ChangeMeetingSettings" method="post">
+                <div class="form-group">
+                    <label for="maxTime">Max Time:</label>
+                    <input type="time" id="maxTime" name="MaxTime" class="form-control" step="1">
+                </div>
+                <div class="form-group">
+                    <label for="maxPeople">Max People:</label>
+                    <input type="number" id="maxPeople" name="MaxPeople" class="form-control" min="1" max="100">
+                </div>
+                <button type="submit" class="btn btn-primary">Change</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+@* <h2>Meeting Settings</h2>
+
+<form asp-action="ChangeMeetingSettings" method="post">
+
+    <label for="maxTime">Max Time:</label>
+    <input type="time" id="maxTime" name="MaxTime" step="1">
+    <br>
+
+    <label for="maxPeople">Max People:</label>
+    <input type="number" id="maxPeople" name="MaxPeople" min="1" max="100">
+    <br>
+
+    <button type="submit">Change</button>
+</form> *@
+
+
