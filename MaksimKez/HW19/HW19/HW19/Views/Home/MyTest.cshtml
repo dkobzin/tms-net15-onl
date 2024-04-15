@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "My Test View";
+}
+@model HW19.Models.MeetingSettings
+
+<div class="container">
+    <div class="card mt-5 bg-primary text-white">
+        <div class="card-body">
+            <h2 class="card-title">Meeting Room Settings</h2>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <span class="font-weight-bold mr-2">@Html.DisplayNameFor(model => model.MaxPeople)</span>
+                    <span>@Model.MaxPeople</span>
+                </li>
+                <li class="list-group-item">
+                    <span class="font-weight-bold mr-2">@Html.DisplayNameFor(model => model.MaxTime)</span>
+                    <span>@Model.MaxTime</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

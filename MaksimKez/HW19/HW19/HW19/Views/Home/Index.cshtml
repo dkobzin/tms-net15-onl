@@ -1,0 +1,18 @@
+﻿<div class="container mt-5 bg-primary">
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">Meeting Settings</h2>
+            <form asp-action="ChangeMeetingSettings" method="post">
+                <div class="form-group">
+                    <label for="maxTime">Max Time:</label>
+                    <input type="time" id="maxTime" name="MaxTime" class="form-control" step="1">
+                </div>
+                <div class="form-group">
+                    <label for="maxPeople">Max People:</label>
+                    <input type="number" id="maxPeople" name="MaxPeople" class="form-control" min="1" max="100">
+                </div>
+                <button type="submit" class="btn btn-primary">Change</button>
+            </form>
+        </div>
+    </div>
+</div>
