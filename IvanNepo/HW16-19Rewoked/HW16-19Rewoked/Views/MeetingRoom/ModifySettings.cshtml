@@ -1,0 +1,16 @@
+﻿@model MeetingRoomSettingsApp.Models.ModifyMeetingRoomSettingsViewModel
+
+<h2>Modify Meeting Room Settings</h2>
+<form asp-action="ModifySettings" method="post">
+    <div class="form-group">
+        <label asp-for="MaxPeople">Max People</label>
+        <input asp-for="MaxPeople" class="form-control" />
+        <span asp-validation-for="MaxPeople" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="MaxMeetingDuration">Max Meeting Duration</label>
+        <input asp-for="MaxMeetingDuration" class="form-control" />
+        <span asp-validation-for="MaxMeetingDuration" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
