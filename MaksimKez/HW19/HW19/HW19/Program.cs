@@ -1,3 +1,4 @@
+using HW19.Middleware;
 using HW19.Services;
 
 namespace HW19
@@ -11,7 +12,7 @@ namespace HW19
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddScoped<IMeetingSettingsServise, MeetingSettingsService>();
-
+            builder.Services.AddScoped<ExceptionHandlerMiddleware>();
             var app = builder.Build();
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
@@ -22,6 +23,8 @@ namespace HW19
             }
 
             app.UseHttpsRedirection();
+
+            app.UseMiddleware<ExceptionHandlerMiddleware>();
             app.UseStaticFiles();
 
             app.UseRouting();
