@@ -1,0 +1,18 @@
+﻿@model Meeting
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form method="post" action="~/MeetingEdit">
+<div>
+    @Html.LabelFor(_ => _.PeopleCount)
+    @Html.EditorFor(_ => _.PeopleCount)
+</div>
+<div>
+    @Html.LabelFor(_ => _.Time)
+    @Html.EditorFor(_ => _.Time)
+</div>
+<div>
+    <input type="submit" value="Submit"/>
+</div>
+</form>
