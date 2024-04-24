@@ -29,6 +29,7 @@ CREATE TABLE penguins_history (
 	updated_date datetime,
 	status_record nvarchar(50),
 );
+
 INSERT INTO penguins VALUES('Adelie','Torgersen',39.10000000000000142,18.69999999999999929,181.0,3750.0,'MALE',NULL, NULL, NULL);
 INSERT INTO penguins VALUES('Adelie','Torgersen',39.5,17.39999999999999857,186.0,3800.0,'FEMALE',NULL, NULL, NULL);
 INSERT INTO penguins VALUES('Adelie','Torgersen',40.29999999999999715,18.0,195.0,3250.0,'FEMALE',NULL, NULL, NULL);
