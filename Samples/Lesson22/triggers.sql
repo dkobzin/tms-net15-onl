@@ -24,7 +24,7 @@ select * from  penguins
 	where species = 'Imperor1'
 
 select * from penguins_history
-	where id = 346
+	-- where id = 346
 
 CREATE TRIGGER penguins_Update ON penguins AFTER UPDATE
 AS
@@ -43,13 +43,13 @@ END
 
 update penguins
 	set body_mass_g = 3750
-	where id = 346
+	where id = 345
 
 select * from  penguins
 	where species = 'Imperor1'
 
 select * from penguins_history
-	where id = 346
+	--where id = 346
 
 CREATE TRIGGER penguins_Delete ON penguins AFTER DELETE
 AS
@@ -68,4 +68,15 @@ select * from  penguins
 	where species = 'Imperor1'
 
 select * from penguins_history
-	where id = 346
+	-- where id = 346
+
+CREATE TRIGGER penguins_Delete_INSTEAD ON penguins INSTEAD OF DELETE
+AS
+BEGIN
+	UPDATE penguins
+	SET updated_date = GETDATE()
+	, status_record = 'Delete'
+	WHERE id = (Select id FROM deleted)
+	
+		
+END
