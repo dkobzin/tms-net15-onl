@@ -1,0 +1,189 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\IvanNepo\\HW16-19Rewoked\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{803488A6-C9A6-4ADB-9C18-26F79B3A8CCB}|HW16-19Rewoked\\HW16-19Rewoked.csproj|d:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\ivannepo\\hw16-19rewoked\\hw16-19rewoked\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{803488A6-C9A6-4ADB-9C18-26F79B3A8CCB}|HW16-19Rewoked\\HW16-19Rewoked.csproj|solutionrelative:hw16-19rewoked\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{803488A6-C9A6-4ADB-9C18-26F79B3A8CCB}|HW16-19Rewoked\\HW16-19Rewoked.csproj|d:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\ivannepo\\hw16-19rewoked\\hw16-19rewoked\\filters\\addresponsetimeheaderfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{803488A6-C9A6-4ADB-9C18-26F79B3A8CCB}|HW16-19Rewoked\\HW16-19Rewoked.csproj|solutionrelative:hw16-19rewoked\\filters\\addresponsetimeheaderfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{803488A6-C9A6-4ADB-9C18-26F79B3A8CCB}|HW16-19Rewoked\\HW16-19Rewoked.csproj|d:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\ivannepo\\hw16-19rewoked\\hw16-19rewoked\\services\\meetingroomsettingsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{803488A6-C9A6-4ADB-9C18-26F79B3A8CCB}|HW16-19Rewoked\\HW16-19Rewoked.csproj|solutionrelative:hw16-19rewoked\\services\\meetingroomsettingsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{803488A6-C9A6-4ADB-9C18-26F79B3A8CCB}|HW16-19Rewoked\\HW16-19Rewoked.csproj|d:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\ivannepo\\hw16-19rewoked\\hw16-19rewoked\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{803488A6-C9A6-4ADB-9C18-26F79B3A8CCB}|HW16-19Rewoked\\HW16-19Rewoked.csproj|solutionrelative:hw16-19rewoked\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{803488A6-C9A6-4ADB-9C18-26F79B3A8CCB}|HW16-19Rewoked\\HW16-19Rewoked.csproj|d:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\ivannepo\\hw16-19rewoked\\hw16-19rewoked\\controllers\\meetingroomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{803488A6-C9A6-4ADB-9C18-26F79B3A8CCB}|HW16-19Rewoked\\HW16-19Rewoked.csproj|solutionrelative:hw16-19rewoked\\controllers\\meetingroomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{803488A6-C9A6-4ADB-9C18-26F79B3A8CCB}|HW16-19Rewoked\\HW16-19Rewoked.csproj|d:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\ivannepo\\hw16-19rewoked\\hw16-19rewoked\\views\\meetingroom\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{803488A6-C9A6-4ADB-9C18-26F79B3A8CCB}|HW16-19Rewoked\\HW16-19Rewoked.csproj|solutionrelative:hw16-19rewoked\\views\\meetingroom\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{803488A6-C9A6-4ADB-9C18-26F79B3A8CCB}|HW16-19Rewoked\\HW16-19Rewoked.csproj|d:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\ivannepo\\hw16-19rewoked\\hw16-19rewoked\\models\\modifymeetingroomsettingsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{803488A6-C9A6-4ADB-9C18-26F79B3A8CCB}|HW16-19Rewoked\\HW16-19Rewoked.csproj|solutionrelative:hw16-19rewoked\\models\\modifymeetingroomsettingsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{803488A6-C9A6-4ADB-9C18-26F79B3A8CCB}|HW16-19Rewoked\\HW16-19Rewoked.csproj|d:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\ivannepo\\hw16-19rewoked\\hw16-19rewoked\\views\\meetingroom\\modifysettings.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{803488A6-C9A6-4ADB-9C18-26F79B3A8CCB}|HW16-19Rewoked\\HW16-19Rewoked.csproj|solutionrelative:hw16-19rewoked\\views\\meetingroom\\modifysettings.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{803488A6-C9A6-4ADB-9C18-26F79B3A8CCB}|HW16-19Rewoked\\HW16-19Rewoked.csproj|d:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\ivannepo\\hw16-19rewoked\\hw16-19rewoked\\exceptionhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{803488A6-C9A6-4ADB-9C18-26F79B3A8CCB}|HW16-19Rewoked\\HW16-19Rewoked.csproj|solutionrelative:hw16-19rewoked\\exceptionhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{803488A6-C9A6-4ADB-9C18-26F79B3A8CCB}|HW16-19Rewoked\\HW16-19Rewoked.csproj|d:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\ivannepo\\hw16-19rewoked\\hw16-19rewoked\\meetinroomsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{803488A6-C9A6-4ADB-9C18-26F79B3A8CCB}|HW16-19Rewoked\\HW16-19Rewoked.csproj|solutionrelative:hw16-19rewoked\\meetinroomsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\IvanNepo\\HW16-19Rewoked\\HW16-19Rewoked\\Program.cs",
+              "RelativeDocumentMoniker": "HW16-19Rewoked\\Program.cs",
+              "ToolTip": "D:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\IvanNepo\\HW16-19Rewoked\\HW16-19Rewoked\\Program.cs",
+              "RelativeToolTip": "HW16-19Rewoked\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T16:15:49.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddResponseTimeHeaderFilter.cs",
+              "DocumentMoniker": "D:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\IvanNepo\\HW16-19Rewoked\\HW16-19Rewoked\\Filters\\AddResponseTimeHeaderFilter.cs",
+              "RelativeDocumentMoniker": "HW16-19Rewoked\\Filters\\AddResponseTimeHeaderFilter.cs",
+              "ToolTip": "D:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\IvanNepo\\HW16-19Rewoked\\HW16-19Rewoked\\Filters\\AddResponseTimeHeaderFilter.cs",
+              "RelativeToolTip": "HW16-19Rewoked\\Filters\\AddResponseTimeHeaderFilter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T16:06:45.978Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ExceptionHandlerMiddleware.cs",
+              "DocumentMoniker": "D:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\IvanNepo\\HW16-19Rewoked\\HW16-19Rewoked\\ExceptionHandlerMiddleware.cs",
+              "RelativeDocumentMoniker": "HW16-19Rewoked\\ExceptionHandlerMiddleware.cs",
+              "ToolTip": "D:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\IvanNepo\\HW16-19Rewoked\\HW16-19Rewoked\\ExceptionHandlerMiddleware.cs",
+              "RelativeToolTip": "HW16-19Rewoked\\ExceptionHandlerMiddleware.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T16:02:15.764Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ModifySettings.cshtml",
+              "DocumentMoniker": "D:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\IvanNepo\\HW16-19Rewoked\\HW16-19Rewoked\\Views\\MeetingRoom\\ModifySettings.cshtml",
+              "RelativeDocumentMoniker": "HW16-19Rewoked\\Views\\MeetingRoom\\ModifySettings.cshtml",
+              "ToolTip": "D:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\IvanNepo\\HW16-19Rewoked\\HW16-19Rewoked\\Views\\MeetingRoom\\ModifySettings.cshtml",
+              "RelativeToolTip": "HW16-19Rewoked\\Views\\MeetingRoom\\ModifySettings.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-15T15:58:55.912Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ModifyMeetingRoomSettingsViewModel.cs",
+              "DocumentMoniker": "D:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\IvanNepo\\HW16-19Rewoked\\HW16-19Rewoked\\Models\\ModifyMeetingRoomSettingsViewModel.cs",
+              "RelativeDocumentMoniker": "HW16-19Rewoked\\Models\\ModifyMeetingRoomSettingsViewModel.cs",
+              "ToolTip": "D:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\IvanNepo\\HW16-19Rewoked\\HW16-19Rewoked\\Models\\ModifyMeetingRoomSettingsViewModel.cs",
+              "RelativeToolTip": "HW16-19Rewoked\\Models\\ModifyMeetingRoomSettingsViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T15:56:34.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\IvanNepo\\HW16-19Rewoked\\HW16-19Rewoked\\Views\\MeetingRoom\\Index.cshtml",
+              "RelativeDocumentMoniker": "HW16-19Rewoked\\Views\\MeetingRoom\\Index.cshtml",
+              "ToolTip": "D:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\IvanNepo\\HW16-19Rewoked\\HW16-19Rewoked\\Views\\MeetingRoom\\Index.cshtml",
+              "RelativeToolTip": "HW16-19Rewoked\\Views\\MeetingRoom\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-15T15:55:28.207Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MeetingRoomController.cs",
+              "DocumentMoniker": "D:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\IvanNepo\\HW16-19Rewoked\\HW16-19Rewoked\\Controllers\\MeetingRoomController.cs",
+              "RelativeDocumentMoniker": "HW16-19Rewoked\\Controllers\\MeetingRoomController.cs",
+              "ToolTip": "D:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\IvanNepo\\HW16-19Rewoked\\HW16-19Rewoked\\Controllers\\MeetingRoomController.cs",
+              "RelativeToolTip": "HW16-19Rewoked\\Controllers\\MeetingRoomController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T15:53:54.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "D:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\IvanNepo\\HW16-19Rewoked\\HW16-19Rewoked\\Startup.cs",
+              "RelativeDocumentMoniker": "HW16-19Rewoked\\Startup.cs",
+              "ToolTip": "D:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\IvanNepo\\HW16-19Rewoked\\HW16-19Rewoked\\Startup.cs",
+              "RelativeToolTip": "HW16-19Rewoked\\Startup.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T15:50:57.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MeetingRoomSettingsService.cs",
+              "DocumentMoniker": "D:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\IvanNepo\\HW16-19Rewoked\\HW16-19Rewoked\\Services\\MeetingRoomSettingsService.cs",
+              "RelativeDocumentMoniker": "HW16-19Rewoked\\Services\\MeetingRoomSettingsService.cs",
+              "ToolTip": "D:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\IvanNepo\\HW16-19Rewoked\\HW16-19Rewoked\\Services\\MeetingRoomSettingsService.cs",
+              "RelativeToolTip": "HW16-19Rewoked\\Services\\MeetingRoomSettingsService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T15:48:18.402Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MeetinRoomSettings.cs",
+              "DocumentMoniker": "D:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\IvanNepo\\HW16-19Rewoked\\HW16-19Rewoked\\MeetinRoomSettings.cs",
+              "RelativeDocumentMoniker": "HW16-19Rewoked\\MeetinRoomSettings.cs",
+              "ToolTip": "D:\\git\\tms-net15-onl(\u043F\u0440\u043E\u0448\u043B\u044B\u0439 \u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0439)\\IvanNepo\\HW16-19Rewoked\\HW16-19Rewoked\\MeetinRoomSettings.cs",
+              "RelativeToolTip": "HW16-19Rewoked\\MeetinRoomSettings.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T15:45:53.792Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
