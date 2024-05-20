@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Lesson16_19_MeetingRoomApp.Models.MeetingRoomSettings>
+
+@{
+    ViewData["Title"] = "Meeting Rooms";
+}
+
+<h2>Meeting Rooms</h2>
+
+<ul>
+    @foreach (var room in Model)
+    {
+        <li>
+            <a asp-controller="MeetingRoom" asp-action="Details" asp-route-name="@room.Name">@room.Name</a>
+        </li>
+    }
+</ul>
