@@ -1,4 +1,5 @@
-﻿using DataAccessLayer.Configations;
+﻿using System.Diagnostics;
+using DataAccessLayer.Configations;
 using DataAccessLayer.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
@@ -21,6 +22,8 @@ namespace DataAccessLayer
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
+            options.LogTo(Console.WriteLine); // Log to Console
+            options.LogTo(message => Debug.WriteLine(message)); // Log to Debug
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
