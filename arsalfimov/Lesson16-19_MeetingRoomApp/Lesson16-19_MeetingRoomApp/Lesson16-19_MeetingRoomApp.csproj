@@ -7,4 +7,8 @@
     <RootNamespace>Lesson16_19_MeetingRoomApp</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
 </Project>

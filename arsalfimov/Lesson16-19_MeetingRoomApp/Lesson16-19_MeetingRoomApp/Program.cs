@@ -1,36 +1,47 @@
-namespace Lesson16_19_MeetingRoomApp
+using Lesson16_19_MeetingRoomApp.Filters;
+using Lesson16_19_MeetingRoomApp.Middleware;
+using Lesson16_19_MeetingRoomApp.Models;
+using Lesson16_19_MeetingRoomApp.Services;
+
+namespace Lesson16_19_MeetingRoomApp;
+
+public static class Program
 {
-    public class Program
+    public static void Main(string[] args)
     {
-        public static void Main(string[] args)
+        var builder = WebApplication.CreateBuilder(args);
+
+        builder.Services.AddControllersWithViews(options =>
         {
-            var builder = WebApplication.CreateBuilder(args);
+            options.Filters.Add<RequestTimeFilter>();
+        });
 
-            // Add services to the container.
-            builder.Services.AddControllersWithViews();
+        builder.Services.Configure<List<MeetingRoomSettings>>(builder.Configuration.GetSection("MeetingRooms"));
 
-            var app = builder.Build();
+        builder.Services.AddTransient<IMeetingRoomService, MeetingRoomService>();
 
-            // Configure the HTTP request pipeline.
-            if (!app.Environment.IsDevelopment())
-            {
-                app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
-            }
+        var app = builder.Build();
 
-            app.UseHttpsRedirection();
-            app.UseStaticFiles();
-
-            app.UseRouting();
-
-            app.UseAuthorization();
-
-            app.MapControllerRoute(
-                name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
-
-            app.Run();
+        // Configure the HTTP request pipeline.
+        if (!app.Environment.IsDevelopment())
+        {
+            app.UseExceptionHandler("/Home/Error");
+            app.UseHsts();
         }
+
+        app.UseMiddleware<ExceptionMiddleware>();
+
+        app.UseHttpsRedirection();
+        app.UseStaticFiles();
+
+        app.UseRouting();
+
+        app.UseAuthorization();
+
+        app.MapControllerRoute(
+            name: "default",
+            pattern: "{controller=MeetingRoom}/{action=Index}/{id?}");
+
+        app.Run();
     }
 }
