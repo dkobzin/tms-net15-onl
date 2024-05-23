@@ -7,7 +7,7 @@ namespace LinqSamples
         static void Main(string[] args)
         {
             var connectionString =
-                @"Server=localhost;Database=hw21;User Id=sa_samples;Password=SuperPassword123;Trust Server Certificate=True;";
+                @"Server=localhost;Database=sample26;User Id=sa_sample26;Password=SuperPassword123;Trust Server Certificate=True;";
             DbContextOptionsBuilder<ApplicationDbContext> contextOptionsBuilder = new();
             contextOptionsBuilder
                 .UseSqlServer((string?)connectionString, options => options.EnableRetryOnFailure(
@@ -48,9 +48,9 @@ namespace LinqSamples
                 .Where(p => p.Sex.Contains("MALE"))
                 .Sum(p => p.BodyMassG);
 
-            /*var littlePinguins = databaseContext.LittlePinguins.Join(databaseContext.Pinguins, lp => lp.ParentId,
+            var littlePinguins = databaseContext.LittlePinguins.Join(databaseContext.Pinguins, lp => lp.ParentId,
                 p => p.Id,
-                (lp, p) => new { lp, p });*/
+                (lp, p) => new { lp, p });
 
             var list = pinguins.Where(p => p.Id < 10).AsEnumerable().ToList();
             var query = pinguins.AsQueryable();
