@@ -5,6 +5,12 @@ using SampleWebApiWithDb.Mappers;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Logging.AddConsole();
+builder.Logging.AddDebug();
+builder.Services.AddHttpLogging(o =>
+{
+    o.CombineLogs = true;
+});
+
 
 // Add services to the container.
 
@@ -29,6 +35,8 @@ builder.Services.AddScoped<IWeatherForecastMapper, WeatherForecastMapper>();
 builder.Services.AddScoped<IUserMapper, UserMapper>();
 
 var app = builder.Build();
+
+app.UseHttpLogging();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
