@@ -42,5 +42,17 @@ namespace SampleWebApiWithDb.Controllers
                 .Select(userEntity => _userMapper.MapToModel(userEntity))
                 .ToList();
         }
+        
+        [HttpPost]
+        public User User([FromBody] User user)
+        {
+            var entity = _userMapper.MapFromModel(user);
+            _applicationDbContext.Users.Add(entity);
+            _applicationDbContext.Database.EnsureCreated();
+            _applicationDbContext.En
+
+            return user;
+        }
+
     }
 }
