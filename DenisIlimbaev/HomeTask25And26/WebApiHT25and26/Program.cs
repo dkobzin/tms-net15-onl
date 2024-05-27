@@ -11,6 +11,8 @@ using System.Security.Claims;
 using System.Diagnostics;
 using System.Net;
 using System.Text;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace WebApiHT25and26
 {
@@ -44,46 +46,59 @@ namespace WebApiHT25and26
             
             var app = builder.Build();
 
-            app.Map("/", [Authorize] async (HttpContext context) =>
+            app.Map("/", [Authorize] () =>
             {
-                string htmlResp = $"<h1>Welcome {context.User.Identity!.Name}</h1> <form action=\"/MettingRoomOperation\"> <button type = \"submit\">Начать конфиренцию</button> </form> "
-                + "<form action=\"/Logout\"> <button type = \"submit\">Выйти из аккаунта</button> </form> ";
-
-
-                context.Response.ContentType = "text/html;charset=utf-8";
-                await context.Response.WriteAsync(htmlResp);
+              return Results.Redirect("/swagger/index.html");
             });
-            app.MapGet("/MettingRoom", async (HttpContext context, AppDbContexts data, UserManager<Person> userManager) =>
+            // получение всех пользователей
+            app.MapGet("/MettingRoomOperation", async (HttpContext context, AppDbContexts data, UserManager<Person> usersManager) =>
             {
                 var meetingRoom = new MeetingRoomModel()
                 {
-                    General = new Person() { UserName = context.User.Identity!.Name },
+                    General = new Person() { UserName = context.User.Identity!.Name, IsSharing = true },
                 };
                 foreach(var user in data.Members)
                 {
-                    var obj = await userManager.FindByEmailAsync(user.Email);
-                    if (obj != null) meetingRoom.MembersMeetingRoom!.Add(obj);
+                    var obj = await usersManager.FindByEmailAsync(user.Email);
+                    if (obj != null) meetingRoom.MembersMeetingRoom!.Add(new Person() { IsSharing = false});
                 }
                 return meetingRoom;
             }).WithOpenApi();
-            app.Map("/MettingRoomOperation",async (HttpContext context) =>
+            app.MapPost("/MeetingRoomOperation/{email}", async(HttpContext context, AppDbContexts data, UserManager <Person> usersManager, string email) =>
             {
-                await context.Response.SendHtml("MeetingRoomOperation");
-            });
-            app.Map("/MettingRoomOperationFromMember/{operation}", (HttpContext context, AppDbContexts data, UserManager<Person> usermanager,string operation) =>
-            {
-                var newMember = new LoginModel()
-                {
-                    Email = context.Request.Form["Email"].ToString() ?? string.Empty
-                };
-                switch (operation)
-                {
-                    case "Delete": data.Members.Remove(newMember); break;
-                    case "Update": data.Members.Update(newMember); break;
-                    case "Create": data.Members.Add(newMember); break;
+                var obj = await usersManager.FindByEmailAsync(email);
+                if(obj != null) 
+                { 
+                    data.Members.Add(new LoginModel() { Email = email });
+                    data.SaveChanges();
+                    return Results.Ok();
                 }
-                return Results.Redirect("/MettingRoomOperation");
+                return Results.Problem();
             });
+           
+            app.MapPut("/MeetingRoomOperation/{email}/{userIsSharing:bool}",async (string email, bool userIsSharing, UserManager<Person> usersManager, AppDbContexts data) =>
+            {
+                var obj = await usersManager.FindByEmailAsync(email);
+                if(obj != null)
+                {
+                    obj.IsSharing = userIsSharing;
+                    await usersManager.UpdateAsync(obj);
+                    return Results.Ok();
+                }
+                return Results.Problem();
+            });
+            app.MapDelete("/MeetingRoomOperation/{email}", (string email, AppDbContexts data) =>
+            {
+                var obj = (from mem in data.Members where mem.Email == email select mem).SingleOrDefault();
+                if (obj != null)
+                {
+                    data.Members.Remove(obj);
+                    data.SaveChanges();
+                    return Results.Ok();
+                }
+                return Results.Problem();
+            });
+
             app.MapGet("/Login", async (HttpContext context) =>
             {
                await context.Response.SendHtml("Login");

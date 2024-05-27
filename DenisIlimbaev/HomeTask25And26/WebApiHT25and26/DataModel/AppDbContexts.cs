@@ -11,15 +11,17 @@ namespace WebApiHT25and26.DataModel
         public DbSet<LoginModel> Members => Set<LoginModel>();
         public AppDbContexts(DbContextOptions<AppDbContexts> options) : base(options)
         {
-            if (!Database.EnsureCreated())
-            {
-                Database.EnsureCreated();
-            }
-            else
-            {
-                Database.EnsureDeleted();
-                Database.EnsureCreated();
-            }
+            //if (!Database.EnsureCreated())
+            //{
+            //    Database.EnsureCreated();
+            //}
+            //else
+            //{
+            //    Database.EnsureDeleted();
+            //    Database.EnsureCreated();
+            //}
+            Database.EnsureDeleted();
+            Database.EnsureCreated();
         }
         protected override void OnModelCreating(ModelBuilder builder)
         {
