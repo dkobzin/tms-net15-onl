@@ -1,6 +1,11 @@
 using DataAccessLayer;
+using DataAccessLayer.Entities;
+using DataAccessLayer.Repositories;
 using Microsoft.EntityFrameworkCore;
 using SampleWebApiWithDb.Mappers;
+using SampleWebApiWithDb.Models;
+using SampleWebApiWithDb.Services;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,6 +38,8 @@ builder.Services.AddScoped<ApplicationDbContext>(
 
 builder.Services.AddScoped<IWeatherForecastMapper, WeatherForecastMapper>();
 builder.Services.AddScoped<IUserMapper, UserMapper>();
+builder.Services.AddScoped<IRepository<UserEntity>, UserRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 var app = builder.Build();
 
