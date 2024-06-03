@@ -6,4 +6,5 @@ namespace SampleWebApiWithDb.Mappers;
 public interface IUserMapper
 {
     User MapToModel(UserEntity entity);
+    UserEntity MapFromModel(User user);
 }

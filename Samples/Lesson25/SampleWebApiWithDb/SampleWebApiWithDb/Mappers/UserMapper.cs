@@ -15,4 +15,15 @@ public class UserMapper : IUserMapper
             AskedWeatherForeCast = entity.AskedWeatherForeCast
         };
     }
+    
+    public UserEntity MapFromModel(User user)
+    {
+        return new UserEntity
+        {
+            Id = user.Id,
+            Name = user.Name,
+            Email = user.Email,
+            AskedWeatherForeCast = user.AskedWeatherForeCast
+        };
+    }
 }

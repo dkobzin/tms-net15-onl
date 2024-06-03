@@ -1,46 +1,54 @@
-using DataAccessLayer;
-using DataAccessLayer.Entities;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using SampleWebApiWithDb.Mappers;
 using SampleWebApiWithDb.Models;
+using SampleWebApiWithDb.Services;
 
 namespace SampleWebApiWithDb.Controllers
 {
     [ApiController]
     [Route("[controller]")]
     public class UserController : ControllerBase
-    {
-        private readonly IUserMapper _userMapper;
-        private readonly ApplicationDbContext _applicationDbContext;
-        
-        private readonly ILogger<WeatherForecastController> _logger;
+    {  
+        private readonly ILogger<UserController> _logger;
+        private readonly IUserService _userService;
 
-        public UserController(ILogger<WeatherForecastController> logger, 
-            IUserMapper userMapper, 
-            ApplicationDbContext applicationDbContext)
+        public UserController(ILogger<UserController> logger, IUserService userService)
         {
             _logger = logger;
-            _userMapper = userMapper;
-            _applicationDbContext = applicationDbContext;
+            _userService = userService;
         }
 
-        [HttpGet(Name = "GetUsers")]
-        public IEnumerable<User> Get()
+        [HttpGet]
+        [Route("{id:guid}")]
+        public User Get([FromQuery] Guid id)
         {
-            var users = _applicationDbContext.Users
-                    // Eager
-                 .Include(p => p.Addresses)
-                // Explicit
-                //    .Load()
-                .Skip(0)
-                .Take(10)
-                .ToList();
+            return _userService.Get(id);
+        }
+        
+        [HttpPost]
+        public User Create([FromBody] User user)
+        {
+            user.Id =  _userService.Create(user);
+            return user;
+        }
+        
+        [HttpPut("{id:guid}")]
+        public User Update([FromBody] User user)
+        {
+            _userService.Update(user);
+            return user;
+        }
+        
+        [HttpDelete("{id:guid}")]
+        public void Delete([FromQuery] Guid id)
+        {
+            _userService.Delete(id);
+        }
 
-
-            return users
-                .Select(userEntity => _userMapper.MapToModel(userEntity))
-                .ToList();
+        [HttpGet]
+        public IEnumerable<User> GetUsers([FromQuery] string userName)
+        {
+            var users = _userService.GetAll(userName);
+            return users;
         }
     }
 }
