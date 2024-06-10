@@ -21,10 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Identity\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="app.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

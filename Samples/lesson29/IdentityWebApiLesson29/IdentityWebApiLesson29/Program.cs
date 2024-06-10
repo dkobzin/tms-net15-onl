@@ -2,6 +2,7 @@ using IdentityWebApiLesson29.Data;
 using IdentityWebApiLesson29.Identity;
 using IdentityWebApiLesson29.Policies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -68,6 +69,8 @@ builder.Services.AddAuthentication(opt =>
         IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:SecurityKey"]!))
     };
 }).AddBearerToken(IdentityConstants.BearerScheme);
+
+builder.Services.AddSingleton<IAuthorizationHandler, MinimumAgeHandler>();
 
 var app = builder.Build();
 

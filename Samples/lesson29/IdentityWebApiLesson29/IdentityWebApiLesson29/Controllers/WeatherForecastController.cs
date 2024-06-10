@@ -5,8 +5,8 @@ namespace IdentityWebApiLesson29.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    //[Authorize(Policy = "AtLeast21")]
-    [Authorize]
+    [Authorize(Policy = "AtLeast21")]
+    [Authorize(Roles = "RegisteredUser,Administrator")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]

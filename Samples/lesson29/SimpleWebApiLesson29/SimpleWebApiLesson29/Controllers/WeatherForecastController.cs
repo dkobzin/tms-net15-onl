@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace SimpleWebApiLesson29.Controllers
@@ -7,7 +8,7 @@ namespace SimpleWebApiLesson29.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
+        private static List<string> Summaries = new List<string>
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
@@ -33,9 +34,32 @@ namespace SimpleWebApiLesson29.Controllers
             {
                 Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
                 TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+                Summary = Summaries[Random.Shared.Next(Summaries.Count)]
             })
             .ToArray();
+        }
+
+        [HttpPost]
+        [Route("{name:alpha}")]
+        [ProducesResponseType(typeof(IEnumerable<WeatherForecast>), 201)]
+        [ProducesResponseType(typeof(IEnumerable<WeatherForecast>), 400)]
+        public IActionResult Post([FromBody] WeatherForecast model)
+        {
+            if (ModelState.IsValid)
+            {
+                var existing =
+                    Summaries.FirstOrDefault(p => p.Equals(model.Summary, StringComparison.InvariantCulture));
+                if (string.IsNullOrEmpty(model.Summary))
+                {
+                    Summaries.Add(model.Summary);
+         
+                }
+            }
+            else
+            {
+                return BadRequest(ModelState);
+            }
+            return Ok(model);
         }
 
         /// <summary>

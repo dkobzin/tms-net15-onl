@@ -32,6 +32,7 @@ namespace SampleAspNetCoreMvc.Controllers
         [HttpPost]
         public IActionResult User([FromForm] UserModel user)
         {
+            user.Address1.Line1
             _userService.Save(user);
             return RedirectToAction("Index");
         }

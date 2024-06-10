@@ -7,6 +7,10 @@ namespace IdentityWebApiLesson29.Policies
         public MinimumAgeRequirement(int minimumAge) =>
             MinimumAge = minimumAge;
 
+        public MinimumAgeRequirement()
+        {
+        }
+
         public int MinimumAge { get; }
     }
 }
