@@ -2,6 +2,7 @@
 using BuisnessLayer.Mappers;
 using DataAccessLayer.Entities;
 using DataAccessLayer.Repositories;
+using Microsoft.Extensions.Configuration;
 
 namespace BuisnessLayer.Services;
 
@@ -9,10 +10,12 @@ public class UserService : IUserService
 {
     private IUserMapper _mapper;
     private IRepository<UserEntity> _repository;
-    public UserService(IUserMapper mapper, IRepository<UserEntity> repository)
+    private IConfiguration _configuration;
+    public UserService(IUserMapper mapper, IRepository<UserEntity> repository, IConfiguration configuration)
     {
         _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         _repository = repository ?? throw new ArgumentNullException(nameof(repository));
+        _configuration = configuration ?? throw new ArgumentNullException(nameof(_configuration));
     }
 
     public UserDto Get(Guid? id)
@@ -52,5 +55,16 @@ public class UserService : IUserService
     {
         var users = _repository.GetAll(userName).ToList();
         return await Task.FromResult(users.Select(userEntity => _mapper.MapToModel(userEntity)).ToList());
+    }
+
+    public string GetValueByKey(string key)
+    {
+        var section = _configuration.GetSection(key);
+        if (section != null)
+        {
+            return section.Value!;
+        }
+
+        return string.Empty;
     }
 }

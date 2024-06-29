@@ -9,4 +9,5 @@ public interface IUserService
     Guid Create(UserDto user);
     void Delete(Guid id);
     Task<IEnumerable<UserDto>> GetAll(string userName);
+    string GetValueByKey(string key);
 }

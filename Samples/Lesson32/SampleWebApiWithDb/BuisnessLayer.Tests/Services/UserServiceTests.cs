@@ -1,12 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
-using AutoFixture;
+﻿using AutoFixture;
 using BuisnessLayer.Dtos;
 using BuisnessLayer.Mappers;
 using BuisnessLayer.Services;
 using DataAccessLayer.Entities;
 using DataAccessLayer.Repositories;
 using FluentAssertions;
-using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.Extensions.Configuration;
 using Moq;
 
 namespace BuisnessLayer.Tests.Services;
@@ -17,9 +16,11 @@ public class UserServiceTests
     private IUserService _underTest;
     private Mock<IUserMapper> _mapperMock;
     private Mock<IRepository<UserEntity>> _repositoryMock;
+    private IConfiguration _configurationMock;
     private UserEntity _userEntity;
     private UserDto _userDto;
     private Fixture _fixture;
+    private string testKey;
 
     [SetUp]
     public void SetUp()
@@ -35,7 +36,15 @@ public class UserServiceTests
         };
         _mapperMock = new Mock<IUserMapper>();
         _repositoryMock = new Mock<IRepository<UserEntity>>();
-        _underTest = new UserService(_mapperMock.Object, _repositoryMock.Object);
+        
+        
+        _configurationMock = new ConfigurationBuilder()
+            .AddInMemoryCollection()
+            .Build();
+        testKey = "Test value";
+        _configurationMock[testKey] = testKey;
+        
+        _underTest = new UserService(_mapperMock.Object, _repositoryMock.Object, _configurationMock);
     }
 
     [TearDown]
@@ -138,4 +147,15 @@ public class UserServiceTests
 
     }
 
+    [Test]
+    public void InitConfigurationIsNotEmpty_WhenGetValueByKey_ThenValueIsNotNull()
+    {
+ 
+        // Act
+         var result = _underTest.GetValueByKey(testKey);
+
+        // Assert
+        result.Should().NotBeNull().And.BeEquivalentTo(testKey);
+
+    }
 }
